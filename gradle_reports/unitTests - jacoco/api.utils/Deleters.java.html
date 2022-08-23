@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="pt"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Deleters.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">api-garage</a> &gt; <a href="index.source.html" class="el_package">api.utils</a> &gt; <span class="el_source">Deleters.java</span></div><h1>Deleters.java</h1><pre class="source lang-java linenums">package api.utils;
+
+import api.mappings.client.Client;
+import api.mappings.vehicle.Vehicle;
+import api.retrofit.client.ClientRequests;
+import api.retrofit.vehicle.VehicleRequests;
+import okhttp3.ResponseBody;
+import retrofit2.Response;
+
+import static api.retrofit.client.ClientRequests.createClient;
+import static api.retrofit.client.ClientRequests.deleteClient;
+import static api.retrofit.vehicle.VehicleRequests.createVehicle;
+import static api.retrofit.vehicle.VehicleRequests.deleteVehicle;
+import static api.validators.ResponseHttpCodeValidator.assertNoContent;
+import static api.validators.ResponseHttpCodeValidator.assertOk;
+
+<span class="nc" id="L17">public class Deleters {</span>
+    public interface DeleteEntityRequest {
+        Response&lt;ResponseBody&gt; run(Integer entityId);
+    }
+    public static void deleteEntity(DeleteEntityRequest deleteRequest, Integer entityId){
+<span class="nc" id="L22">        Response&lt;ResponseBody&gt; response = deleteRequest.run(entityId);</span>
+<span class="nc" id="L23">        assertNoContent(response);</span>
+<span class="nc" id="L24">    }</span>
+<span class="nc" id="L25">    public  static DeleteEntityRequest deleteClientRequest = ClientRequests::deleteClient;</span>
+<span class="nc" id="L26">    public static DeleteEntityRequest deleteVehicleRequest = VehicleRequests::deleteVehicle;</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

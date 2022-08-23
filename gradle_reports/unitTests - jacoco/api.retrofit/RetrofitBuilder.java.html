@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="pt"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>RetrofitBuilder.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">api-garage</a> &gt; <a href="index.source.html" class="el_package">api.retrofit</a> &gt; <span class="el_source">RetrofitBuilder.java</span></div><h1>RetrofitBuilder.java</h1><pre class="source lang-java linenums">package api.retrofit;
+
+import okhttp3.OkHttpClient;
+import okhttp3.logging.HttpLoggingInterceptor;
+import retrofit2.Retrofit;
+import retrofit2.converter.jackson.JacksonConverterFactory;
+
+import static java.util.concurrent.TimeUnit.SECONDS;
+
+public class RetrofitBuilder {
+    
+    //docs at http://garage.estga.com/swagger-ui/index.html
+<span class="nc" id="L13">    private static final String API_URL = System.getProperty(&quot;base_url&quot;, &quot;http://garage.estga.com&quot;);</span>
+<span class="nc" id="L14">    private static final Integer TIMEOUT = Integer.parseInt(System.getProperty(&quot;timeout&quot;, &quot;30&quot;));</span>
+    private Retrofit retrofit;
+    
+    
+<span class="nc" id="L18">    public RetrofitBuilder() {</span>
+<span class="nc" id="L19">        retrofit = buildRetrofit(buildClient());</span>
+<span class="nc" id="L20">    }</span>
+    
+    public Retrofit getRetrofit() {
+<span class="nc" id="L23">        return retrofit;</span>
+    }
+    
+    /**
+     * @return HttpClient and logging set
+     */
+    protected OkHttpClient buildClient() {
+<span class="nc" id="L30">        return new OkHttpClient.Builder()</span>
+<span class="nc" id="L31">                .addInterceptor(new HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BODY))</span>
+<span class="nc" id="L32">                .connectTimeout(TIMEOUT, SECONDS)</span>
+<span class="nc" id="L33">                .readTimeout(TIMEOUT, SECONDS)</span>
+<span class="nc" id="L34">                .build();</span>
+    }
+    
+    /**
+     * @return Retrofit with base url, converter and client set
+     */
+    private Retrofit buildRetrofit(OkHttpClient client) {
+<span class="nc" id="L41">        return new Retrofit.Builder()</span>
+<span class="nc" id="L42">                .baseUrl(API_URL)</span>
+<span class="nc" id="L43">                .addConverterFactory(JacksonConverterFactory.create())</span>
+<span class="nc" id="L44">                .client(client)</span>
+<span class="nc" id="L45">                .build();</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

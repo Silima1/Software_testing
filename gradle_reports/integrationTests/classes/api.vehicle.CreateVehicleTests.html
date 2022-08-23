@@ -1,0 +1,922 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - Class api.vehicle.CreateVehicleTests</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>Class api.vehicle.CreateVehicleTests</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/api.vehicle.html">api.vehicle</a> &gt; CreateVehicleTests</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">13</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">5</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">0.139s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox failures" id="successRate">
+<div class="percent">61%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Failed tests</a>
+</li>
+<li>
+<a href="#tab1">Tests</a>
+</li>
+<li>
+<a href="#tab2">Standard error</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Failed tests</h2>
+<div class="test">
+<a name="createVehicleClientNotNullTest"></a>
+<h3 class="failures">createVehicleClientNotNullTest</h3>
+<span class="code">
+<pre>java.lang.AssertionError: Message should be Client should be null on creation when using client is not null
+Expected: is &quot;Client should be null on creation&quot;
+     but: was &quot;JSON parse error: Unresolved forward references for: ; nested exception is com.fasterxml.jackson.databind.deser.UnresolvedForwardReference: Unresolved forward references for: \n at [Source: (PushbackInputStream); line: 1, column: 112]Object id [1] (for `pt.ua.garage.model.Client`) at [Source: (PushbackInputStream); line: 1, column: 22].&quot;
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at api.validators.ErrorResponseValidator.assertErrorResponse(ErrorResponseValidator.java:24)
+	at api.vehicle.CreateVehicleTests.validateCreateVehicleBadRequest(CreateVehicleTests.java:96)
+	at api.vehicle.CreateVehicleTests.createVehicleClientNotNullTest(CreateVehicleTests.java:144)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.runTests(TestNGTestClassProcessor.java:141)
+	at org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.stop(TestNGTestClassProcessor.java:90)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:61)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
+	at com.sun.proxy.$Proxy5.stop(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:193)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60)
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:133)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="createVehicleInvalidYearTest[0](-1)"></a>
+<h3 class="failures">createVehicleInvalidYearTest[0](-1)</h3>
+<span class="code">
+<pre>java.lang.AssertionError: Expected response code to be [400] but was [201]
+Expected: is &lt;400&gt;
+     but: was &lt;201&gt;
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at api.validators.ResponseHttpCodeValidator.assertBadRequest(ResponseHttpCodeValidator.java:47)
+	at api.vehicle.CreateVehicleTests.validateCreateVehicleBadRequest(CreateVehicleTests.java:71)
+	at api.vehicle.CreateVehicleTests.createVehicleInvalidYearTest(CreateVehicleTests.java:126)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.runTests(TestNGTestClassProcessor.java:141)
+	at org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.stop(TestNGTestClassProcessor.java:90)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:61)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
+	at com.sun.proxy.$Proxy5.stop(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:193)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60)
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:133)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="createVehicleValidPlateTest[0](22-22-22)"></a>
+<h3 class="failures">createVehicleValidPlateTest[0](22-22-22)</h3>
+<span class="code">
+<pre>java.lang.AssertionError: Expected response code to be [201] but was [400]
+Expected: is &lt;201&gt;
+     but: was &lt;400&gt;
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at api.validators.ResponseHttpCodeValidator.assertCreated(ResponseHttpCodeValidator.java:31)
+	at api.vehicle.CreateVehicleTests.createVehicleValidPlateTest(CreateVehicleTests.java:106)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.runTests(TestNGTestClassProcessor.java:141)
+	at org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.stop(TestNGTestClassProcessor.java:90)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:61)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
+	at com.sun.proxy.$Proxy5.stop(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:193)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60)
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:133)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="createVehicleValidPlateTest[2](AA-AA-22)"></a>
+<h3 class="failures">createVehicleValidPlateTest[2](AA-AA-22)</h3>
+<span class="code">
+<pre>java.lang.AssertionError: Expected response code to be [201] but was [400]
+Expected: is &lt;201&gt;
+     but: was &lt;400&gt;
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at api.validators.ResponseHttpCodeValidator.assertCreated(ResponseHttpCodeValidator.java:31)
+	at api.vehicle.CreateVehicleTests.createVehicleValidPlateTest(CreateVehicleTests.java:106)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.runTests(TestNGTestClassProcessor.java:141)
+	at org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.stop(TestNGTestClassProcessor.java:90)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:61)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
+	at com.sun.proxy.$Proxy5.stop(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:193)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60)
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:133)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="createVehicleValidPlateTest[3](AA-AA-AA)"></a>
+<h3 class="failures">createVehicleValidPlateTest[3](AA-AA-AA)</h3>
+<span class="code">
+<pre>java.lang.AssertionError: Expected response code to be [201] but was [400]
+Expected: is &lt;201&gt;
+     but: was &lt;400&gt;
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at api.validators.ResponseHttpCodeValidator.assertCreated(ResponseHttpCodeValidator.java:31)
+	at api.vehicle.CreateVehicleTests.createVehicleValidPlateTest(CreateVehicleTests.java:106)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.runTests(TestNGTestClassProcessor.java:141)
+	at org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.stop(TestNGTestClassProcessor.java:90)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:61)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
+	at com.sun.proxy.$Proxy5.stop(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:193)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60)
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:133)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+</pre>
+</span>
+</div>
+</div>
+<div id="tab1" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="failures">createVehicleClientNotNullTest</td>
+<td class="failures">0.013s</td>
+<td class="failures">failed</td>
+</tr>
+<tr>
+<td class="success">createVehicleIdNotNullTest</td>
+<td class="success">0.010s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">createVehicleInvalidPlateTest[0](A2-AA-22)</td>
+<td class="success">0.009s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">createVehicleInvalidPlateTest[1](22 AA 22)</td>
+<td class="success">0.008s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">createVehicleInvalidPlateTest[2](22.AA.22)</td>
+<td class="success">0.010s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">createVehicleInvalidPlateTest[3](22_AA_22)</td>
+<td class="success">0.008s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">createVehicleInvalidPlateTest[4](22AA22)</td>
+<td class="success">0.011s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="failures">createVehicleInvalidYearTest[0](-1)</td>
+<td class="failures">0.012s</td>
+<td class="failures">failed</td>
+</tr>
+<tr>
+<td class="success">createVehicleTest</td>
+<td class="success">0.022s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="failures">createVehicleValidPlateTest[0](22-22-22)</td>
+<td class="failures">0.008s</td>
+<td class="failures">failed</td>
+</tr>
+<tr>
+<td class="success">createVehicleValidPlateTest[1](AA-22-22)</td>
+<td class="success">0.009s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="failures">createVehicleValidPlateTest[2](AA-AA-22)</td>
+<td class="failures">0.009s</td>
+<td class="failures">failed</td>
+</tr>
+<tr>
+<td class="failures">createVehicleValidPlateTest[3](AA-AA-AA)</td>
+<td class="failures">0.010s</td>
+<td class="failures">failed</td>
+</tr>
+</table>
+</div>
+<div id="tab2" class="tab">
+<h2>Standard error</h2>
+<span class="code">
+<pre>jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: --&gt; POST http://garage.estga.com/vehicle
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Content-Type: application/json; charset=UTF-8
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Content-Length: 112
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: 
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: {&quot;id&quot;:null,&quot;client&quot;:1,&quot;brand&quot;:&quot;peugeot&quot;,&quot;model&quot;:&quot;207&quot;,&quot;year&quot;:2007,&quot;type&quot;:&quot;car&quot;,&quot;plate&quot;:&quot;AA-22-22&quot;,&quot;active&quot;:true}
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: --&gt; END POST (112-byte body)
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: &lt;-- 400 http://garage.estga.com/vehicle (4ms)
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Server: nginx/1.18.0 (Ubuntu)
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Date: Sat, 18 Jun 2022 11:24:55 GMT
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Content-Type: application/json
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Transfer-Encoding: chunked
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Connection: keep-alive
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: 
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: {&quot;timestamp&quot;:&quot;2022-06-18T11:24:55.449+00:00&quot;,&quot;status&quot;:400,&quot;error&quot;:&quot;Bad Request&quot;,&quot;message&quot;:&quot;JSON parse error: Unresolved forward references for: ; nested exception is com.fasterxml.jackson.databind.deser.UnresolvedForwardReference: Unresolved forward references for: \n at [Source: (PushbackInputStream); line: 1, column: 112]Object id [1] (for `pt.ua.garage.model.Client`) at [Source: (PushbackInputStream); line: 1, column: 22].&quot;,&quot;path&quot;:&quot;/vehicle&quot;}
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: &lt;-- END HTTP (449-byte body)
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: --&gt; POST http://garage.estga.com/vehicle
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Content-Type: application/json; charset=UTF-8
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Content-Length: 112
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: 
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: {&quot;id&quot;:1,&quot;client&quot;:null,&quot;brand&quot;:&quot;peugeot&quot;,&quot;model&quot;:&quot;207&quot;,&quot;year&quot;:2007,&quot;type&quot;:&quot;car&quot;,&quot;plate&quot;:&quot;AA-22-22&quot;,&quot;active&quot;:true}
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: --&gt; END POST (112-byte body)
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: &lt;-- 400 http://garage.estga.com/vehicle (5ms)
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Server: nginx/1.18.0 (Ubuntu)
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Date: Sat, 18 Jun 2022 11:24:55 GMT
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Content-Type: application/json
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Transfer-Encoding: chunked
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Connection: keep-alive
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: 
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: {&quot;timestamp&quot;:&quot;2022-06-18T11:24:55.465+00:00&quot;,&quot;status&quot;:400,&quot;error&quot;:&quot;Bad Request&quot;,&quot;message&quot;:&quot;Id should be null on creation&quot;,&quot;path&quot;:&quot;/vehicle&quot;}
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: &lt;-- END HTTP (140-byte body)
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: --&gt; POST http://garage.estga.com/vehicle
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Content-Type: application/json; charset=UTF-8
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Content-Length: 115
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: 
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: {&quot;id&quot;:null,&quot;client&quot;:null,&quot;brand&quot;:&quot;peugeot&quot;,&quot;model&quot;:&quot;207&quot;,&quot;year&quot;:2007,&quot;type&quot;:&quot;car&quot;,&quot;plate&quot;:&quot;A2-AA-22&quot;,&quot;active&quot;:true}
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: --&gt; END POST (115-byte body)
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: &lt;-- 400 http://garage.estga.com/vehicle (4ms)
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Server: nginx/1.18.0 (Ubuntu)
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Date: Sat, 18 Jun 2022 11:24:55 GMT
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Content-Type: application/json
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Transfer-Encoding: chunked
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Connection: keep-alive
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: 
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: {&quot;timestamp&quot;:&quot;2022-06-18T11:24:55.475+00:00&quot;,&quot;status&quot;:400,&quot;error&quot;:&quot;Bad Request&quot;,&quot;message&quot;:&quot;Invalid Plate&quot;,&quot;path&quot;:&quot;/vehicle&quot;}
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: &lt;-- END HTTP (124-byte body)
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: --&gt; POST http://garage.estga.com/vehicle
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Content-Type: application/json; charset=UTF-8
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Content-Length: 115
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: 
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: {&quot;id&quot;:null,&quot;client&quot;:null,&quot;brand&quot;:&quot;peugeot&quot;,&quot;model&quot;:&quot;207&quot;,&quot;year&quot;:2007,&quot;type&quot;:&quot;car&quot;,&quot;plate&quot;:&quot;22 AA 22&quot;,&quot;active&quot;:true}
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: --&gt; END POST (115-byte body)
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: &lt;-- 400 http://garage.estga.com/vehicle (3ms)
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Server: nginx/1.18.0 (Ubuntu)
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Date: Sat, 18 Jun 2022 11:24:55 GMT
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Content-Type: application/json
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Transfer-Encoding: chunked
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Connection: keep-alive
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: 
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: {&quot;timestamp&quot;:&quot;2022-06-18T11:24:55.485+00:00&quot;,&quot;status&quot;:400,&quot;error&quot;:&quot;Bad Request&quot;,&quot;message&quot;:&quot;Invalid Plate&quot;,&quot;path&quot;:&quot;/vehicle&quot;}
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: &lt;-- END HTTP (124-byte body)
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: --&gt; POST http://garage.estga.com/vehicle
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Content-Type: application/json; charset=UTF-8
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Content-Length: 115
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: 
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: {&quot;id&quot;:null,&quot;client&quot;:null,&quot;brand&quot;:&quot;peugeot&quot;,&quot;model&quot;:&quot;207&quot;,&quot;year&quot;:2007,&quot;type&quot;:&quot;car&quot;,&quot;plate&quot;:&quot;22.AA.22&quot;,&quot;active&quot;:true}
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: --&gt; END POST (115-byte body)
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: &lt;-- 400 http://garage.estga.com/vehicle (5ms)
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Server: nginx/1.18.0 (Ubuntu)
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Date: Sat, 18 Jun 2022 11:24:55 GMT
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Content-Type: application/json
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Transfer-Encoding: chunked
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Connection: keep-alive
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: 
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: {&quot;timestamp&quot;:&quot;2022-06-18T11:24:55.496+00:00&quot;,&quot;status&quot;:400,&quot;error&quot;:&quot;Bad Request&quot;,&quot;message&quot;:&quot;Invalid Plate&quot;,&quot;path&quot;:&quot;/vehicle&quot;}
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: &lt;-- END HTTP (124-byte body)
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: --&gt; POST http://garage.estga.com/vehicle
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Content-Type: application/json; charset=UTF-8
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Content-Length: 115
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: 
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: {&quot;id&quot;:null,&quot;client&quot;:null,&quot;brand&quot;:&quot;peugeot&quot;,&quot;model&quot;:&quot;207&quot;,&quot;year&quot;:2007,&quot;type&quot;:&quot;car&quot;,&quot;plate&quot;:&quot;22_AA_22&quot;,&quot;active&quot;:true}
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: --&gt; END POST (115-byte body)
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: &lt;-- 400 http://garage.estga.com/vehicle (4ms)
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Server: nginx/1.18.0 (Ubuntu)
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Date: Sat, 18 Jun 2022 11:24:55 GMT
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Content-Type: application/json
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Transfer-Encoding: chunked
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Connection: keep-alive
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: 
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: {&quot;timestamp&quot;:&quot;2022-06-18T11:24:55.507+00:00&quot;,&quot;status&quot;:400,&quot;error&quot;:&quot;Bad Request&quot;,&quot;message&quot;:&quot;Invalid Plate&quot;,&quot;path&quot;:&quot;/vehicle&quot;}
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: &lt;-- END HTTP (124-byte body)
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: --&gt; POST http://garage.estga.com/vehicle
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Content-Type: application/json; charset=UTF-8
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Content-Length: 113
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: 
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: {&quot;id&quot;:null,&quot;client&quot;:null,&quot;brand&quot;:&quot;peugeot&quot;,&quot;model&quot;:&quot;207&quot;,&quot;year&quot;:2007,&quot;type&quot;:&quot;car&quot;,&quot;plate&quot;:&quot;22AA22&quot;,&quot;active&quot;:true}
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: --&gt; END POST (113-byte body)
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: &lt;-- 400 http://garage.estga.com/vehicle (5ms)
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Server: nginx/1.18.0 (Ubuntu)
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Date: Sat, 18 Jun 2022 11:24:55 GMT
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Content-Type: application/json
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Transfer-Encoding: chunked
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Connection: keep-alive
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: 
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: {&quot;timestamp&quot;:&quot;2022-06-18T11:24:55.518+00:00&quot;,&quot;status&quot;:400,&quot;error&quot;:&quot;Bad Request&quot;,&quot;message&quot;:&quot;Invalid Plate&quot;,&quot;path&quot;:&quot;/vehicle&quot;}
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: &lt;-- END HTTP (124-byte body)
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: --&gt; POST http://garage.estga.com/vehicle
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Content-Type: application/json; charset=UTF-8
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Content-Length: 113
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: 
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: {&quot;id&quot;:null,&quot;client&quot;:null,&quot;brand&quot;:&quot;peugeot&quot;,&quot;model&quot;:&quot;207&quot;,&quot;year&quot;:-1,&quot;type&quot;:&quot;car&quot;,&quot;plate&quot;:&quot;AA-22-22&quot;,&quot;active&quot;:true}
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: --&gt; END POST (113-byte body)
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: &lt;-- 201 http://garage.estga.com/vehicle (7ms)
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Server: nginx/1.18.0 (Ubuntu)
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Date: Sat, 18 Jun 2022 11:24:55 GMT
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Content-Type: application/json
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Transfer-Encoding: chunked
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Connection: keep-alive
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: 
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: 781
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: &lt;-- END HTTP (3-byte body)
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: --&gt; DELETE http://garage.estga.com/vehicle/781
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: --&gt; END DELETE
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: &lt;-- 204 http://garage.estga.com/vehicle/781 (7ms)
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Server: nginx/1.18.0 (Ubuntu)
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Date: Sat, 18 Jun 2022 11:24:55 GMT
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Connection: keep-alive
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: &lt;-- END HTTP
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: --&gt; POST http://garage.estga.com/vehicle
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Content-Type: application/json; charset=UTF-8
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Content-Length: 115
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: 
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: {&quot;id&quot;:null,&quot;client&quot;:null,&quot;brand&quot;:&quot;peugeot&quot;,&quot;model&quot;:&quot;207&quot;,&quot;year&quot;:2007,&quot;type&quot;:&quot;car&quot;,&quot;plate&quot;:&quot;AA-22-22&quot;,&quot;active&quot;:true}
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: --&gt; END POST (115-byte body)
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: &lt;-- 201 http://garage.estga.com/vehicle (7ms)
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Server: nginx/1.18.0 (Ubuntu)
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Date: Sat, 18 Jun 2022 11:24:55 GMT
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Content-Type: application/json
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Transfer-Encoding: chunked
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Connection: keep-alive
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: 
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: 782
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: &lt;-- END HTTP (3-byte body)
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: --&gt; GET http://garage.estga.com/vehicle/782
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: --&gt; END GET
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: &lt;-- 200 http://garage.estga.com/vehicle/782 (3ms)
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Server: nginx/1.18.0 (Ubuntu)
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Date: Sat, 18 Jun 2022 11:24:55 GMT
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Content-Type: application/json
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Transfer-Encoding: chunked
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Connection: keep-alive
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: 
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: {&quot;id&quot;:782,&quot;client&quot;:null,&quot;brand&quot;:&quot;peugeot&quot;,&quot;model&quot;:&quot;207&quot;,&quot;year&quot;:2007,&quot;type&quot;:&quot;car&quot;,&quot;plate&quot;:&quot;AA-22-22&quot;,&quot;active&quot;:true}
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: &lt;-- END HTTP (114-byte body)
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: --&gt; DELETE http://garage.estga.com/vehicle/782
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: --&gt; END DELETE
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: &lt;-- 204 http://garage.estga.com/vehicle/782 (4ms)
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Server: nginx/1.18.0 (Ubuntu)
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Date: Sat, 18 Jun 2022 11:24:55 GMT
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Connection: keep-alive
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: &lt;-- END HTTP
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: --&gt; POST http://garage.estga.com/vehicle
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Content-Type: application/json; charset=UTF-8
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Content-Length: 115
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: 
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: {&quot;id&quot;:null,&quot;client&quot;:null,&quot;brand&quot;:&quot;peugeot&quot;,&quot;model&quot;:&quot;207&quot;,&quot;year&quot;:2007,&quot;type&quot;:&quot;car&quot;,&quot;plate&quot;:&quot;22-22-22&quot;,&quot;active&quot;:true}
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: --&gt; END POST (115-byte body)
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: &lt;-- 400 http://garage.estga.com/vehicle (4ms)
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Server: nginx/1.18.0 (Ubuntu)
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Date: Sat, 18 Jun 2022 11:24:55 GMT
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Content-Type: application/json
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Transfer-Encoding: chunked
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Connection: keep-alive
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: 
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: {&quot;timestamp&quot;:&quot;2022-06-18T11:24:55.582+00:00&quot;,&quot;status&quot;:400,&quot;error&quot;:&quot;Bad Request&quot;,&quot;message&quot;:&quot;Invalid Plate&quot;,&quot;path&quot;:&quot;/vehicle&quot;}
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: &lt;-- END HTTP (124-byte body)
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: --&gt; POST http://garage.estga.com/vehicle
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Content-Type: application/json; charset=UTF-8
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Content-Length: 115
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: 
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: {&quot;id&quot;:null,&quot;client&quot;:null,&quot;brand&quot;:&quot;peugeot&quot;,&quot;model&quot;:&quot;207&quot;,&quot;year&quot;:2007,&quot;type&quot;:&quot;car&quot;,&quot;plate&quot;:&quot;AA-22-22&quot;,&quot;active&quot;:true}
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: --&gt; END POST (115-byte body)
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: &lt;-- 201 http://garage.estga.com/vehicle (6ms)
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Server: nginx/1.18.0 (Ubuntu)
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Date: Sat, 18 Jun 2022 11:24:55 GMT
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Content-Type: application/json
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Transfer-Encoding: chunked
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Connection: keep-alive
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: 
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: 783
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: &lt;-- END HTTP (3-byte body)
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: --&gt; DELETE http://garage.estga.com/vehicle/783
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: --&gt; END DELETE
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: &lt;-- 204 http://garage.estga.com/vehicle/783 (4ms)
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Server: nginx/1.18.0 (Ubuntu)
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Date: Sat, 18 Jun 2022 11:24:55 GMT
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Connection: keep-alive
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: &lt;-- END HTTP
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: --&gt; POST http://garage.estga.com/vehicle
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Content-Type: application/json; charset=UTF-8
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Content-Length: 115
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: 
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: {&quot;id&quot;:null,&quot;client&quot;:null,&quot;brand&quot;:&quot;peugeot&quot;,&quot;model&quot;:&quot;207&quot;,&quot;year&quot;:2007,&quot;type&quot;:&quot;car&quot;,&quot;plate&quot;:&quot;AA-AA-22&quot;,&quot;active&quot;:true}
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: --&gt; END POST (115-byte body)
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: &lt;-- 400 http://garage.estga.com/vehicle (5ms)
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Server: nginx/1.18.0 (Ubuntu)
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Date: Sat, 18 Jun 2022 11:24:55 GMT
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Content-Type: application/json
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Transfer-Encoding: chunked
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Connection: keep-alive
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: 
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: {&quot;timestamp&quot;:&quot;2022-06-18T11:24:55.610+00:00&quot;,&quot;status&quot;:400,&quot;error&quot;:&quot;Bad Request&quot;,&quot;message&quot;:&quot;Invalid Plate&quot;,&quot;path&quot;:&quot;/vehicle&quot;}
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: &lt;-- END HTTP (124-byte body)
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: --&gt; POST http://garage.estga.com/vehicle
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Content-Type: application/json; charset=UTF-8
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Content-Length: 115
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: 
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: {&quot;id&quot;:null,&quot;client&quot;:null,&quot;brand&quot;:&quot;peugeot&quot;,&quot;model&quot;:&quot;207&quot;,&quot;year&quot;:2007,&quot;type&quot;:&quot;car&quot;,&quot;plate&quot;:&quot;AA-AA-AA&quot;,&quot;active&quot;:true}
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: --&gt; END POST (115-byte body)
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: &lt;-- 400 http://garage.estga.com/vehicle (6ms)
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Server: nginx/1.18.0 (Ubuntu)
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Date: Sat, 18 Jun 2022 11:24:55 GMT
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Content-Type: application/json
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Transfer-Encoding: chunked
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Connection: keep-alive
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: 
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: {&quot;timestamp&quot;:&quot;2022-06-18T11:24:55.621+00:00&quot;,&quot;status&quot;:400,&quot;error&quot;:&quot;Bad Request&quot;,&quot;message&quot;:&quot;Invalid Plate&quot;,&quot;path&quot;:&quot;/vehicle&quot;}
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: &lt;-- END HTTP (124-byte body)
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 7.3.3</a> at 18/06/2022, 12:24:57</p>
+</div>
+</div>
+</body>
+</html>

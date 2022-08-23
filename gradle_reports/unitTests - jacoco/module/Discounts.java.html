@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="pt"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Discounts.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">api-garage</a> &gt; <a href="index.source.html" class="el_package">module</a> &gt; <span class="el_source">Discounts.java</span></div><h1>Discounts.java</h1><pre class="source lang-java linenums">package module;
+
+import java.time.DayOfWeek;
+import java.time.LocalDate;
+
+public class Discounts {
+
+    private Discounts() {
+    }
+
+    public static int discountByAge(Integer carYear) {
+<span class="fc" id="L12">        int age = LocalDate.now().getYear() - carYear;</span>
+<span class="fc" id="L13">        int discount = 0;</span>
+
+<span class="fc bfc" id="L15" title="All 2 branches covered.">        if (age &gt;= 5) {</span>
+<span class="fc" id="L16">            discount = 2;</span>
+        }
+<span class="fc bfc" id="L18" title="All 4 branches covered.">        if (age &gt;= 6 &amp;&amp; age &lt; 10) {</span>
+<span class="fc" id="L19">            discount = discount + age - 3;</span>
+<span class="fc bfc" id="L20" title="All 2 branches covered.">        } else if (age &gt; 10) {</span>
+<span class="fc" id="L21">            discount = (discount + age) / 2;</span>
+        }
+<span class="fc" id="L23">        return discount;</span>
+    }
+
+    public static int discountByBrand(String brand) {
+<span class="fc bfc" id="L27" title="All 4 branches covered.">        return switch (brand) {</span>
+<span class="fc" id="L28">            case &quot;VW&quot; -&gt; 3;</span>
+<span class="fc" id="L29">            case &quot;Tesla&quot; -&gt; 5;</span>
+<span class="fc" id="L30">            case &quot;BMW&quot; -&gt; 7;</span>
+<span class="fc" id="L31">            default -&gt; 0;</span>
+        };
+    }
+
+    public static int calculateTotalDiscount(Integer carYear, String brand, LocalDate today) {
+<span class="fc" id="L36">        int MAX_TOTAL_DISCOUNT = 25;</span>
+<span class="fc" id="L37">        int PROMOTION_DAY_DISCOUNT = 5;</span>
+<span class="fc" id="L38">        boolean isPromotionDay = today.getDayOfWeek().equals(DayOfWeek.FRIDAY);</span>
+
+<span class="fc" id="L40">        int totalDiscount = discountByAge(carYear) + discountByBrand(brand);</span>
+
+<span class="fc bfc" id="L42" title="All 2 branches covered.">        if (isPromotionDay) {</span>
+<span class="fc" id="L43">            totalDiscount = totalDiscount + PROMOTION_DAY_DISCOUNT;</span>
+        }
+
+<span class="fc" id="L46">        totalDiscount = Math.min(totalDiscount, MAX_TOTAL_DISCOUNT);</span>
+
+<span class="fc" id="L48">        return totalDiscount;</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

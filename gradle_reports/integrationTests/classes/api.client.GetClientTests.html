@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - Class api.client.GetClientTests</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>Class api.client.GetClientTests</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/api.client.html">api.client</a> &gt; GetClientTests</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">3</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">0.063s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard error</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">clientNotFoundTest</td>
+<td class="success">0.012s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">clientValuesTest</td>
+<td class="success">0.011s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">numberOfClientsTest</td>
+<td class="success">0.040s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard error</h2>
+<span class="code">
+<pre>jun. 18, 2022 12:24:56 DA TARDE okhttp3.internal.platform.Platform log
+INFO: --&gt; GET http://garage.estga.com/client/722
+jun. 18, 2022 12:24:56 DA TARDE okhttp3.internal.platform.Platform log
+INFO: --&gt; END GET
+jun. 18, 2022 12:24:56 DA TARDE okhttp3.internal.platform.Platform log
+INFO: &lt;-- 404 http://garage.estga.com/client/722 (9ms)
+jun. 18, 2022 12:24:56 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Server: nginx/1.18.0 (Ubuntu)
+jun. 18, 2022 12:24:56 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Date: Sat, 18 Jun 2022 11:24:56 GMT
+jun. 18, 2022 12:24:56 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Content-Type: application/json
+jun. 18, 2022 12:24:56 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Transfer-Encoding: chunked
+jun. 18, 2022 12:24:56 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Connection: keep-alive
+jun. 18, 2022 12:24:56 DA TARDE okhttp3.internal.platform.Platform log
+INFO: 
+jun. 18, 2022 12:24:56 DA TARDE okhttp3.internal.platform.Platform log
+INFO: {&quot;timestamp&quot;:&quot;2022-06-18T11:24:56.003+00:00&quot;,&quot;status&quot;:404,&quot;error&quot;:&quot;Not Found&quot;,&quot;message&quot;:&quot;Client not found&quot;,&quot;path&quot;:&quot;/client/722&quot;}
+jun. 18, 2022 12:24:56 DA TARDE okhttp3.internal.platform.Platform log
+INFO: &lt;-- END HTTP (128-byte body)
+jun. 18, 2022 12:24:56 DA TARDE okhttp3.internal.platform.Platform log
+INFO: --&gt; GET http://garage.estga.com/client/721
+jun. 18, 2022 12:24:56 DA TARDE okhttp3.internal.platform.Platform log
+INFO: --&gt; END GET
+jun. 18, 2022 12:24:56 DA TARDE okhttp3.internal.platform.Platform log
+INFO: &lt;-- 200 http://garage.estga.com/client/721 (6ms)
+jun. 18, 2022 12:24:56 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Server: nginx/1.18.0 (Ubuntu)
+jun. 18, 2022 12:24:56 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Date: Sat, 18 Jun 2022 11:24:56 GMT
+jun. 18, 2022 12:24:56 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Content-Type: application/json
+jun. 18, 2022 12:24:56 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Transfer-Encoding: chunked
+jun. 18, 2022 12:24:56 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Connection: keep-alive
+jun. 18, 2022 12:24:56 DA TARDE okhttp3.internal.platform.Platform log
+INFO: 
+jun. 18, 2022 12:24:56 DA TARDE okhttp3.internal.platform.Platform log
+INFO: {&quot;id&quot;:721,&quot;firstName&quot;:&quot;Bruno&quot;,&quot;lastName&quot;:&quot;Lopes&quot;,&quot;address&quot;:&quot;testing street&quot;,&quot;postalCode&quot;:&quot;3500-300&quot;,&quot;city&quot;:&quot;Viseu&quot;,&quot;country&quot;:&quot;Portugal&quot;,&quot;phoneNumber&quot;:919191919,&quot;nif&quot;:123456789,&quot;birthDate&quot;:&quot;2022-06-06&quot;,&quot;clientDate&quot;:&quot;2022-06-07&quot;,&quot;vehicles&quot;:[]}
+jun. 18, 2022 12:24:56 DA TARDE okhttp3.internal.platform.Platform log
+INFO: &lt;-- END HTTP (241-byte body)
+jun. 18, 2022 12:24:56 DA TARDE okhttp3.internal.platform.Platform log
+INFO: --&gt; GET http://garage.estga.com/client
+jun. 18, 2022 12:24:56 DA TARDE okhttp3.internal.platform.Platform log
+INFO: --&gt; END GET
+jun. 18, 2022 12:24:56 DA TARDE okhttp3.internal.platform.Platform log
+INFO: &lt;-- 200 http://garage.estga.com/client (7ms)
+jun. 18, 2022 12:24:56 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Server: nginx/1.18.0 (Ubuntu)
+jun. 18, 2022 12:24:56 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Date: Sat, 18 Jun 2022 11:24:56 GMT
+jun. 18, 2022 12:24:56 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Content-Type: application/json
+jun. 18, 2022 12:24:56 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Transfer-Encoding: chunked
+jun. 18, 2022 12:24:56 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Connection: keep-alive
+jun. 18, 2022 12:24:56 DA TARDE okhttp3.internal.platform.Platform log
+INFO: 
+jun. 18, 2022 12:24:56 DA TARDE okhttp3.internal.platform.Platform log
+INFO: [{&quot;id&quot;:1,&quot;firstName&quot;:&quot;Afonso&quot;,&quot;lastName&quot;:&quot;Silva&quot;,&quot;address&quot;:&quot;Rua da Esquina&quot;,&quot;postalCode&quot;:&quot;3810-700&quot;,&quot;city&quot;:&quot;Aveiro&quot;,&quot;country&quot;:&quot;Portugal&quot;,&quot;phoneNumber&quot;:966111222,&quot;nif&quot;:212212212,&quot;birthDate&quot;:&quot;1983-01-01&quot;,&quot;clientDate&quot;:&quot;2001-05-05&quot;,&quot;vehicles&quot;:[{&quot;id&quot;:1,&quot;client&quot;:1,&quot;brand&quot;:&quot;Fiat&quot;,&quot;model&quot;:&quot;Punto&quot;,&quot;year&quot;:1999,&quot;type&quot;:&quot;Hatchback&quot;,&quot;plate&quot;:&quot;ZE-10-20&quot;,&quot;active&quot;:true},{&quot;id&quot;:2,&quot;client&quot;:1,&quot;brand&quot;:&quot;Opel&quot;,&quot;model&quot;:&quot;Corsa&quot;,&quot;year&quot;:2002,&quot;type&quot;:&quot;Hatchback&quot;,&quot;plate&quot;:&quot;34-CB-45&quot;,&quot;active&quot;:true}]},{&quot;id&quot;:2,&quot;firstName&quot;:&quot;Maria&quot;,&quot;lastName&quot;:&quot;Lopes&quot;,&quot;address&quot;:&quot;Avenida Principal&quot;,&quot;postalCode&quot;:&quot;4350-334&quot;,&quot;city&quot;:&quot;Porto&quot;,&quot;country&quot;:&quot;Portugal&quot;,&quot;phoneNumber&quot;:911222333,&quot;nif&quot;:222333444,&quot;birthDate&quot;:&quot;1997-09-12&quot;,&quot;clientDate&quot;:&quot;2010-07-01&quot;,&quot;vehicles&quot;:[]},{&quot;id&quot;:720,&quot;firstName&quot;:&quot;Bruno&quot;,&quot;lastName&quot;:&quot;Lopes&quot;,&quot;address&quot;:&quot;testing street&quot;,&quot;postalCode&quot;:&quot;3500-300&quot;,&quot;city&quot;:&quot;Viseu&quot;,&quot;country&quot;:&quot;Portugal&quot;,&quot;phoneNumber&quot;:919191919,&quot;nif&quot;:123456789,&quot;birthDate&quot;:&quot;2022-06-06&quot;,&quot;clientDate&quot;:&quot;2022-06-07&quot;,&quot;vehicles&quot;:[{&quot;id&quot;:776,&quot;client&quot;:720,&quot;brand&quot;:&quot;peugeot&quot;,&quot;model&quot;:&quot;207&quot;,&quot;year&quot;:2007,&quot;type&quot;:&quot;car&quot;,&quot;plate&quot;:&quot;AA-22-22&quot;,&quot;active&quot;:true}]},{&quot;id&quot;:721,&quot;firstName&quot;:&quot;Bruno&quot;,&quot;lastName&quot;:&quot;Lopes&quot;,&quot;address&quot;:&quot;testing street&quot;,&quot;postalCode&quot;:&quot;3500-300&quot;,&quot;city&quot;:&quot;Viseu&quot;,&quot;country&quot;:&quot;Portugal&quot;,&quot;phoneNumber&quot;:919191919,&quot;nif&quot;:123456789,&quot;birthDate&quot;:&quot;2022-06-06&quot;,&quot;clientDate&quot;:&quot;2022-06-07&quot;,&quot;vehicles&quot;:[]}]
+jun. 18, 2022 12:24:56 DA TARDE okhttp3.internal.platform.Platform log
+INFO: &lt;-- END HTTP (1312-byte body)
+jun. 18, 2022 12:24:56 DA TARDE okhttp3.internal.platform.Platform log
+INFO: --&gt; POST http://garage.estga.com/client
+jun. 18, 2022 12:24:56 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Content-Type: application/json; charset=UTF-8
+jun. 18, 2022 12:24:56 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Content-Length: 242
+jun. 18, 2022 12:24:56 DA TARDE okhttp3.internal.platform.Platform log
+INFO: 
+jun. 18, 2022 12:24:56 DA TARDE okhttp3.internal.platform.Platform log
+INFO: {&quot;id&quot;:null,&quot;firstName&quot;:&quot;Bruno&quot;,&quot;lastName&quot;:&quot;Lopes&quot;,&quot;address&quot;:&quot;testing street&quot;,&quot;postalCode&quot;:&quot;3500-300&quot;,&quot;city&quot;:&quot;Viseu&quot;,&quot;country&quot;:&quot;Portugal&quot;,&quot;phoneNumber&quot;:919191919,&quot;nif&quot;:123456789,&quot;birthDate&quot;:&quot;2022-06-06&quot;,&quot;clientDate&quot;:&quot;2022-06-07&quot;,&quot;vehicles&quot;:[]}
+jun. 18, 2022 12:24:56 DA TARDE okhttp3.internal.platform.Platform log
+INFO: --&gt; END POST (242-byte body)
+jun. 18, 2022 12:24:56 DA TARDE okhttp3.internal.platform.Platform log
+INFO: &lt;-- 201 http://garage.estga.com/client (10ms)
+jun. 18, 2022 12:24:56 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Server: nginx/1.18.0 (Ubuntu)
+jun. 18, 2022 12:24:56 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Date: Sat, 18 Jun 2022 11:24:56 GMT
+jun. 18, 2022 12:24:56 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Content-Type: application/json
+jun. 18, 2022 12:24:56 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Transfer-Encoding: chunked
+jun. 18, 2022 12:24:56 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Connection: keep-alive
+jun. 18, 2022 12:24:56 DA TARDE okhttp3.internal.platform.Platform log
+INFO: 
+jun. 18, 2022 12:24:56 DA TARDE okhttp3.internal.platform.Platform log
+INFO: 733
+jun. 18, 2022 12:24:56 DA TARDE okhttp3.internal.platform.Platform log
+INFO: &lt;-- END HTTP (3-byte body)
+jun. 18, 2022 12:24:56 DA TARDE okhttp3.internal.platform.Platform log
+INFO: --&gt; GET http://garage.estga.com/client
+jun. 18, 2022 12:24:56 DA TARDE okhttp3.internal.platform.Platform log
+INFO: --&gt; END GET
+jun. 18, 2022 12:24:56 DA TARDE okhttp3.internal.platform.Platform log
+INFO: &lt;-- 200 http://garage.estga.com/client (8ms)
+jun. 18, 2022 12:24:56 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Server: nginx/1.18.0 (Ubuntu)
+jun. 18, 2022 12:24:56 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Date: Sat, 18 Jun 2022 11:24:56 GMT
+jun. 18, 2022 12:24:56 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Content-Type: application/json
+jun. 18, 2022 12:24:56 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Transfer-Encoding: chunked
+jun. 18, 2022 12:24:56 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Connection: keep-alive
+jun. 18, 2022 12:24:56 DA TARDE okhttp3.internal.platform.Platform log
+INFO: 
+jun. 18, 2022 12:24:56 DA TARDE okhttp3.internal.platform.Platform log
+INFO: [{&quot;id&quot;:1,&quot;firstName&quot;:&quot;Afonso&quot;,&quot;lastName&quot;:&quot;Silva&quot;,&quot;address&quot;:&quot;Rua da Esquina&quot;,&quot;postalCode&quot;:&quot;3810-700&quot;,&quot;city&quot;:&quot;Aveiro&quot;,&quot;country&quot;:&quot;Portugal&quot;,&quot;phoneNumber&quot;:966111222,&quot;nif&quot;:212212212,&quot;birthDate&quot;:&quot;1983-01-01&quot;,&quot;clientDate&quot;:&quot;2001-05-05&quot;,&quot;vehicles&quot;:[{&quot;id&quot;:1,&quot;client&quot;:1,&quot;brand&quot;:&quot;Fiat&quot;,&quot;model&quot;:&quot;Punto&quot;,&quot;year&quot;:1999,&quot;type&quot;:&quot;Hatchback&quot;,&quot;plate&quot;:&quot;ZE-10-20&quot;,&quot;active&quot;:true},{&quot;id&quot;:2,&quot;client&quot;:1,&quot;brand&quot;:&quot;Opel&quot;,&quot;model&quot;:&quot;Corsa&quot;,&quot;year&quot;:2002,&quot;type&quot;:&quot;Hatchback&quot;,&quot;plate&quot;:&quot;34-CB-45&quot;,&quot;active&quot;:true}]},{&quot;id&quot;:2,&quot;firstName&quot;:&quot;Maria&quot;,&quot;lastName&quot;:&quot;Lopes&quot;,&quot;address&quot;:&quot;Avenida Principal&quot;,&quot;postalCode&quot;:&quot;4350-334&quot;,&quot;city&quot;:&quot;Porto&quot;,&quot;country&quot;:&quot;Portugal&quot;,&quot;phoneNumber&quot;:911222333,&quot;nif&quot;:222333444,&quot;birthDate&quot;:&quot;1997-09-12&quot;,&quot;clientDate&quot;:&quot;2010-07-01&quot;,&quot;vehicles&quot;:[]},{&quot;id&quot;:720,&quot;firstName&quot;:&quot;Bruno&quot;,&quot;lastName&quot;:&quot;Lopes&quot;,&quot;address&quot;:&quot;testing street&quot;,&quot;postalCode&quot;:&quot;3500-300&quot;,&quot;city&quot;:&quot;Viseu&quot;,&quot;country&quot;:&quot;Portugal&quot;,&quot;phoneNumber&quot;:919191919,&quot;nif&quot;:123456789,&quot;birthDate&quot;:&quot;2022-06-06&quot;,&quot;clientDate&quot;:&quot;2022-06-07&quot;,&quot;vehicles&quot;:[{&quot;id&quot;:776,&quot;client&quot;:720,&quot;brand&quot;:&quot;peugeot&quot;,&quot;model&quot;:&quot;207&quot;,&quot;year&quot;:2007,&quot;type&quot;:&quot;car&quot;,&quot;plate&quot;:&quot;AA-22-22&quot;,&quot;active&quot;:true}]},{&quot;id&quot;:721,&quot;firstName&quot;:&quot;Bruno&quot;,&quot;lastName&quot;:&quot;Lopes&quot;,&quot;address&quot;:&quot;testing street&quot;,&quot;postalCode&quot;:&quot;3500-300&quot;,&quot;city&quot;:&quot;Viseu&quot;,&quot;country&quot;:&quot;Portugal&quot;,&quot;phoneNumber&quot;:919191919,&quot;nif&quot;:123456789,&quot;birthDate&quot;:&quot;2022-06-06&quot;,&quot;clientDate&quot;:&quot;2022-06-07&quot;,&quot;vehicles&quot;:[]},{&quot;id&quot;:733,&quot;firstName&quot;:&quot;Bruno&quot;,&quot;lastName&quot;:&quot;Lopes&quot;,&quot;address&quot;:&quot;testing street&quot;,&quot;postalCode&quot;:&quot;3500-300&quot;,&quot;city&quot;:&quot;Viseu&quot;,&quot;country&quot;:&quot;Portugal&quot;,&quot;phoneNumber&quot;:919191919,&quot;nif&quot;:123456789,&quot;birthDate&quot;:&quot;2022-06-06&quot;,&quot;clientDate&quot;:&quot;2022-06-07&quot;,&quot;vehicles&quot;:[]}]
+jun. 18, 2022 12:24:56 DA TARDE okhttp3.internal.platform.Platform log
+INFO: &lt;-- END HTTP (1554-byte body)
+jun. 18, 2022 12:24:56 DA TARDE okhttp3.internal.platform.Platform log
+INFO: --&gt; DELETE http://garage.estga.com/client/733
+jun. 18, 2022 12:24:56 DA TARDE okhttp3.internal.platform.Platform log
+INFO: --&gt; END DELETE
+jun. 18, 2022 12:24:56 DA TARDE okhttp3.internal.platform.Platform log
+INFO: &lt;-- 204 http://garage.estga.com/client/733 (11ms)
+jun. 18, 2022 12:24:56 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Server: nginx/1.18.0 (Ubuntu)
+jun. 18, 2022 12:24:56 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Date: Sat, 18 Jun 2022 11:24:56 GMT
+jun. 18, 2022 12:24:56 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Connection: keep-alive
+jun. 18, 2022 12:24:56 DA TARDE okhttp3.internal.platform.Platform log
+INFO: &lt;-- END HTTP
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 7.3.3</a> at 18/06/2022, 12:24:57</p>
+</div>
+</div>
+</body>
+</html>

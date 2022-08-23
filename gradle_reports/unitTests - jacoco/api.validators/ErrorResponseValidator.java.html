@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="pt"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>ErrorResponseValidator.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">api-garage</a> &gt; <a href="index.source.html" class="el_package">api.validators</a> &gt; <span class="el_source">ErrorResponseValidator.java</span></div><h1>ErrorResponseValidator.java</h1><pre class="source lang-java linenums">package api.validators;
+
+import api.mappings.generic.ErrorResponse;
+import lombok.AccessLevel;
+import lombok.NoArgsConstructor;
+import lombok.SneakyThrows;
+import retrofit2.Response;
+
+
+import static api.retrofit.generic.Errors.getErrorsResponse;
+import static api.validators.ResponseHttpCodeValidator.assertBadRequest;
+import static java.net.HttpURLConnection.HTTP_BAD_REQUEST;
+import static java.net.HttpURLConnection.HTTP_CREATED;
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.is;
+
+@NoArgsConstructor(access = AccessLevel.PRIVATE)
+public class ErrorResponseValidator {
+    public static void assertErrorResponse(ErrorResponse errorResponse, String message, String path, Integer status, String error, Object usedValue) {
+<span class="nc" id="L20">        String extraText = &quot;&quot;;</span>
+<span class="nc bnc" id="L21" title="All 2 branches missed.">        if(usedValue != null){</span>
+<span class="nc" id="L22">            extraText = String.format(&quot;when using %s&quot;, usedValue.toString());</span>
+        }
+<span class="nc" id="L24">        assertThat(String.format(&quot;Message should be %s %s&quot;, message, extraText), errorResponse.getMessage(), is(message));</span>
+<span class="nc" id="L25">        assertThat(String.format(&quot;Path should be %s %s&quot;, path, extraText), errorResponse.getPath(), is(path));</span>
+<span class="nc" id="L26">        assertThat(String.format(&quot;Status should be %s %s&quot;, status, extraText), errorResponse.getStatus(), is(status));</span>
+<span class="nc" id="L27">        assertThat(String.format(&quot;Error should be %s %s&quot;, error, extraText), errorResponse.getError(), is(error));</span>
+<span class="nc" id="L28">    }</span>
+
+    public static void assertErrorResponse(ErrorResponse errorResponse, String message, String path, Integer status, String error) {
+<span class="nc" id="L31">        assertErrorResponse( errorResponse,  message,  path,  status,  error, &quot;&quot;);</span>
+<span class="nc" id="L32">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

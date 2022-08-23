@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - Class api.client.DeleteClientTests</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>Class api.client.DeleteClientTests</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/api.client.html">api.client</a> &gt; DeleteClientTests</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">2</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">1</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">0.024s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox failures" id="successRate">
+<div class="percent">50%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Failed tests</a>
+</li>
+<li>
+<a href="#tab1">Tests</a>
+</li>
+<li>
+<a href="#tab2">Standard error</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Failed tests</h2>
+<div class="test">
+<a name="deleteClientErrorTest"></a>
+<h3 class="failures">deleteClientErrorTest</h3>
+<span class="code">
+<pre>java.lang.AssertionError: Expected response code to be [404] but was [204]
+Expected: is &lt;404&gt;
+     but: was &lt;204&gt;
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at api.validators.ResponseHttpCodeValidator.assertNotFound(ResponseHttpCodeValidator.java:59)
+	at api.client.DeleteClientTests.deleteClientErrorTest(DeleteClientTests.java:39)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.runTests(TestNGTestClassProcessor.java:141)
+	at org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.stop(TestNGTestClassProcessor.java:90)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:61)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
+	at com.sun.proxy.$Proxy5.stop(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:193)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60)
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:133)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+</pre>
+</span>
+</div>
+</div>
+<div id="tab1" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="failures">deleteClientErrorTest</td>
+<td class="failures">0.008s</td>
+<td class="failures">failed</td>
+</tr>
+<tr>
+<td class="success">deleteClientTest</td>
+<td class="success">0.016s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab2" class="tab">
+<h2>Standard error</h2>
+<span class="code">
+<pre>jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: --&gt; POST http://garage.estga.com/client
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Content-Type: application/json; charset=UTF-8
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Content-Length: 242
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: 
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: {&quot;id&quot;:null,&quot;firstName&quot;:&quot;Bruno&quot;,&quot;lastName&quot;:&quot;Lopes&quot;,&quot;address&quot;:&quot;testing street&quot;,&quot;postalCode&quot;:&quot;3500-300&quot;,&quot;city&quot;:&quot;Viseu&quot;,&quot;country&quot;:&quot;Portugal&quot;,&quot;phoneNumber&quot;:919191919,&quot;nif&quot;:123456789,&quot;birthDate&quot;:&quot;2022-06-06&quot;,&quot;clientDate&quot;:&quot;2022-06-07&quot;,&quot;vehicles&quot;:[]}
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: --&gt; END POST (242-byte body)
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: &lt;-- 201 http://garage.estga.com/client (24ms)
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Server: nginx/1.18.0 (Ubuntu)
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Date: Sat, 18 Jun 2022 11:24:55 GMT
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Content-Type: application/json
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Transfer-Encoding: chunked
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Connection: keep-alive
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: 
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: 730
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: &lt;-- END HTTP (3-byte body)
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: --&gt; POST http://garage.estga.com/client
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Content-Type: application/json; charset=UTF-8
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Content-Length: 242
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: 
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: {&quot;id&quot;:null,&quot;firstName&quot;:&quot;Bruno&quot;,&quot;lastName&quot;:&quot;Lopes&quot;,&quot;address&quot;:&quot;testing street&quot;,&quot;postalCode&quot;:&quot;3500-300&quot;,&quot;city&quot;:&quot;Viseu&quot;,&quot;country&quot;:&quot;Portugal&quot;,&quot;phoneNumber&quot;:919191919,&quot;nif&quot;:123456789,&quot;birthDate&quot;:&quot;2022-06-06&quot;,&quot;clientDate&quot;:&quot;2022-06-07&quot;,&quot;vehicles&quot;:[]}
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: --&gt; END POST (242-byte body)
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: &lt;-- 201 http://garage.estga.com/client (9ms)
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Server: nginx/1.18.0 (Ubuntu)
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Date: Sat, 18 Jun 2022 11:24:55 GMT
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Content-Type: application/json
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Transfer-Encoding: chunked
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Connection: keep-alive
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: 
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: 731
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: &lt;-- END HTTP (3-byte body)
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: --&gt; POST http://garage.estga.com/vehicle
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Content-Type: application/json; charset=UTF-8
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Content-Length: 115
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: 
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: {&quot;id&quot;:null,&quot;client&quot;:null,&quot;brand&quot;:&quot;peugeot&quot;,&quot;model&quot;:&quot;207&quot;,&quot;year&quot;:2007,&quot;type&quot;:&quot;car&quot;,&quot;plate&quot;:&quot;AA-22-22&quot;,&quot;active&quot;:true}
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: --&gt; END POST (115-byte body)
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: &lt;-- 201 http://garage.estga.com/vehicle (8ms)
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Server: nginx/1.18.0 (Ubuntu)
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Date: Sat, 18 Jun 2022 11:24:55 GMT
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Content-Type: application/json
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Transfer-Encoding: chunked
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Connection: keep-alive
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: 
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: 784
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: &lt;-- END HTTP (3-byte body)
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: --&gt; POST http://garage.estga.com/vehicle
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Content-Type: application/json; charset=UTF-8
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Content-Length: 115
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: 
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: {&quot;id&quot;:null,&quot;client&quot;:null,&quot;brand&quot;:&quot;peugeot&quot;,&quot;model&quot;:&quot;207&quot;,&quot;year&quot;:2007,&quot;type&quot;:&quot;car&quot;,&quot;plate&quot;:&quot;AA-22-22&quot;,&quot;active&quot;:true}
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: --&gt; END POST (115-byte body)
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: &lt;-- 201 http://garage.estga.com/vehicle (4ms)
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Server: nginx/1.18.0 (Ubuntu)
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Date: Sat, 18 Jun 2022 11:24:55 GMT
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Content-Type: application/json
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Transfer-Encoding: chunked
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Connection: keep-alive
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: 
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: 785
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: &lt;-- END HTTP (3-byte body)
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: --&gt; POST http://garage.estga.com/client
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Content-Type: application/json; charset=UTF-8
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Content-Length: 242
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: 
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: {&quot;id&quot;:null,&quot;firstName&quot;:&quot;Bruno&quot;,&quot;lastName&quot;:&quot;Lopes&quot;,&quot;address&quot;:&quot;testing street&quot;,&quot;postalCode&quot;:&quot;3500-300&quot;,&quot;city&quot;:&quot;Viseu&quot;,&quot;country&quot;:&quot;Portugal&quot;,&quot;phoneNumber&quot;:919191919,&quot;nif&quot;:123456789,&quot;birthDate&quot;:&quot;2022-06-06&quot;,&quot;clientDate&quot;:&quot;2022-06-07&quot;,&quot;vehicles&quot;:[]}
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: --&gt; END POST (242-byte body)
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: &lt;-- 201 http://garage.estga.com/client (6ms)
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Server: nginx/1.18.0 (Ubuntu)
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Date: Sat, 18 Jun 2022 11:24:55 GMT
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Content-Type: application/json
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Transfer-Encoding: chunked
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Connection: keep-alive
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: 
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: 732
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: &lt;-- END HTTP (3-byte body)
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: --&gt; DELETE http://garage.estga.com/client/732
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: --&gt; END DELETE
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: &lt;-- 204 http://garage.estga.com/client/732 (6ms)
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Server: nginx/1.18.0 (Ubuntu)
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Date: Sat, 18 Jun 2022 11:24:55 GMT
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Connection: keep-alive
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: &lt;-- END HTTP
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: --&gt; PUT http://garage.estga.com/vehicle/784/client/730
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Content-Length: 0
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: 
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: 
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: --&gt; END PUT (0-byte body)
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: &lt;-- 204 http://garage.estga.com/vehicle/784/client/730 (4ms)
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Server: nginx/1.18.0 (Ubuntu)
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Date: Sat, 18 Jun 2022 11:24:55 GMT
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Connection: keep-alive
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: &lt;-- END HTTP
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: --&gt; DELETE http://garage.estga.com/client/732
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: --&gt; END DELETE
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: &lt;-- 204 http://garage.estga.com/client/732 (5ms)
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Server: nginx/1.18.0 (Ubuntu)
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Date: Sat, 18 Jun 2022 11:24:55 GMT
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Connection: keep-alive
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: &lt;-- END HTTP
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: --&gt; DELETE http://garage.estga.com/client/730
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: --&gt; END DELETE
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: &lt;-- 204 http://garage.estga.com/client/730 (5ms)
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Server: nginx/1.18.0 (Ubuntu)
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Date: Sat, 18 Jun 2022 11:24:55 GMT
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Connection: keep-alive
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: &lt;-- END HTTP
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: --&gt; GET http://garage.estga.com/client/730
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: --&gt; END GET
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: &lt;-- 404 http://garage.estga.com/client/730 (6ms)
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Server: nginx/1.18.0 (Ubuntu)
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Date: Sat, 18 Jun 2022 11:24:55 GMT
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Content-Type: application/json
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Transfer-Encoding: chunked
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Connection: keep-alive
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: 
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: {&quot;timestamp&quot;:&quot;2022-06-18T11:24:55.734+00:00&quot;,&quot;status&quot;:404,&quot;error&quot;:&quot;Not Found&quot;,&quot;message&quot;:&quot;Client not found&quot;,&quot;path&quot;:&quot;/client/730&quot;}
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: &lt;-- END HTTP (128-byte body)
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 7.3.3</a> at 18/06/2022, 12:24:57</p>
+</div>
+</div>
+</body>
+</html>

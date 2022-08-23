@@ -1,0 +1,2476 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - Class api.client.CreateClientTests</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>Class api.client.CreateClientTests</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/api.client.html">api.client</a> &gt; CreateClientTests</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">26</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">20</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">0.664s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox failures" id="successRate">
+<div class="percent">23%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Failed tests</a>
+</li>
+<li>
+<a href="#tab1">Tests</a>
+</li>
+<li>
+<a href="#tab2">Standard error</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Failed tests</h2>
+<div class="test">
+<a name="createClientInvalidBirthDateTest[0](2022-13-06)"></a>
+<h3 class="failures">createClientInvalidBirthDateTest[0](2022-13-06)</h3>
+<span class="code">
+<pre>java.lang.AssertionError: Message should be Invalid Birth Date when using 2022-13-06
+Expected: is &quot;Invalid Birth Date&quot;
+     but: was &quot;JSON parse error: Cannot deserialize value of type `java.time.LocalDate` from String \&quot;2022-13-06\&quot;: Failed to deserialize java.time.LocalDate: (java.time.format.DateTimeParseException) Text '2022-13-06' could not be parsed: Invalid value for MonthOfYear (valid values 1 - 12): 13; nested exception is com.fasterxml.jackson.databind.exc.InvalidFormatException: Cannot deserialize value of type `java.time.LocalDate` from String \&quot;2022-13-06\&quot;: Failed to deserialize java.time.LocalDate: (java.time.format.DateTimeParseException) Text '2022-13-06' could not be parsed: Invalid value for MonthOfYear (valid values 1 - 12): 13\n at [Source: (PushbackInputStream); line: 1, column: 190] (through reference chain: pt.ua.garage.model.Client[\&quot;birthDate\&quot;])&quot;
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at api.validators.ErrorResponseValidator.assertErrorResponse(ErrorResponseValidator.java:24)
+	at api.client.CreateClientTests.validateCreateClientBadRequest(CreateClientTests.java:99)
+	at api.client.CreateClientTests.createClientInvalidBirthDateTest(CreateClientTests.java:110)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.runTests(TestNGTestClassProcessor.java:141)
+	at org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.stop(TestNGTestClassProcessor.java:90)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:61)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
+	at com.sun.proxy.$Proxy5.stop(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:193)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60)
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:133)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="createClientInvalidBirthDateTest[1](2022-06-32)"></a>
+<h3 class="failures">createClientInvalidBirthDateTest[1](2022-06-32)</h3>
+<span class="code">
+<pre>java.lang.AssertionError: Message should be Invalid Birth Date when using 2022-06-32
+Expected: is &quot;Invalid Birth Date&quot;
+     but: was &quot;JSON parse error: Cannot deserialize value of type `java.time.LocalDate` from String \&quot;2022-06-32\&quot;: Failed to deserialize java.time.LocalDate: (java.time.format.DateTimeParseException) Text '2022-06-32' could not be parsed: Invalid value for DayOfMonth (valid values 1 - 28/31): 32; nested exception is com.fasterxml.jackson.databind.exc.InvalidFormatException: Cannot deserialize value of type `java.time.LocalDate` from String \&quot;2022-06-32\&quot;: Failed to deserialize java.time.LocalDate: (java.time.format.DateTimeParseException) Text '2022-06-32' could not be parsed: Invalid value for DayOfMonth (valid values 1 - 28/31): 32\n at [Source: (PushbackInputStream); line: 1, column: 190] (through reference chain: pt.ua.garage.model.Client[\&quot;birthDate\&quot;])&quot;
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at api.validators.ErrorResponseValidator.assertErrorResponse(ErrorResponseValidator.java:24)
+	at api.client.CreateClientTests.validateCreateClientBadRequest(CreateClientTests.java:99)
+	at api.client.CreateClientTests.createClientInvalidBirthDateTest(CreateClientTests.java:110)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.runTests(TestNGTestClassProcessor.java:141)
+	at org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.stop(TestNGTestClassProcessor.java:90)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:61)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
+	at com.sun.proxy.$Proxy5.stop(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:193)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60)
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:133)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="createClientInvalidBirthDateTest[2](2022/06/06)"></a>
+<h3 class="failures">createClientInvalidBirthDateTest[2](2022/06/06)</h3>
+<span class="code">
+<pre>java.lang.AssertionError: Message should be Invalid Birth Date when using 2022/06/06
+Expected: is &quot;Invalid Birth Date&quot;
+     but: was &quot;JSON parse error: Cannot deserialize value of type `java.time.LocalDate` from String \&quot;2022/06/06\&quot;: Failed to deserialize java.time.LocalDate: (java.time.format.DateTimeParseException) Text '2022/06/06' could not be parsed at index 4; nested exception is com.fasterxml.jackson.databind.exc.InvalidFormatException: Cannot deserialize value of type `java.time.LocalDate` from String \&quot;2022/06/06\&quot;: Failed to deserialize java.time.LocalDate: (java.time.format.DateTimeParseException) Text '2022/06/06' could not be parsed at index 4\n at [Source: (PushbackInputStream); line: 1, column: 190] (through reference chain: pt.ua.garage.model.Client[\&quot;birthDate\&quot;])&quot;
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at api.validators.ErrorResponseValidator.assertErrorResponse(ErrorResponseValidator.java:24)
+	at api.client.CreateClientTests.validateCreateClientBadRequest(CreateClientTests.java:99)
+	at api.client.CreateClientTests.createClientInvalidBirthDateTest(CreateClientTests.java:110)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.runTests(TestNGTestClassProcessor.java:141)
+	at org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.stop(TestNGTestClassProcessor.java:90)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:61)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
+	at com.sun.proxy.$Proxy5.stop(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:193)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60)
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:133)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="createClientInvalidBirthDateTest[3](2022 06 06)"></a>
+<h3 class="failures">createClientInvalidBirthDateTest[3](2022 06 06)</h3>
+<span class="code">
+<pre>java.lang.AssertionError: Message should be Invalid Birth Date when using 2022 06 06
+Expected: is &quot;Invalid Birth Date&quot;
+     but: was &quot;JSON parse error: Cannot deserialize value of type `java.time.LocalDate` from String \&quot;2022 06 06\&quot;: Failed to deserialize java.time.LocalDate: (java.time.format.DateTimeParseException) Text '2022 06 06' could not be parsed at index 4; nested exception is com.fasterxml.jackson.databind.exc.InvalidFormatException: Cannot deserialize value of type `java.time.LocalDate` from String \&quot;2022 06 06\&quot;: Failed to deserialize java.time.LocalDate: (java.time.format.DateTimeParseException) Text '2022 06 06' could not be parsed at index 4\n at [Source: (PushbackInputStream); line: 1, column: 190] (through reference chain: pt.ua.garage.model.Client[\&quot;birthDate\&quot;])&quot;
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at api.validators.ErrorResponseValidator.assertErrorResponse(ErrorResponseValidator.java:24)
+	at api.client.CreateClientTests.validateCreateClientBadRequest(CreateClientTests.java:99)
+	at api.client.CreateClientTests.createClientInvalidBirthDateTest(CreateClientTests.java:110)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.runTests(TestNGTestClassProcessor.java:141)
+	at org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.stop(TestNGTestClassProcessor.java:90)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:61)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
+	at com.sun.proxy.$Proxy5.stop(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:193)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60)
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:133)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="createClientInvalidBirthDateTest[4](2022)"></a>
+<h3 class="failures">createClientInvalidBirthDateTest[4](2022)</h3>
+<span class="code">
+<pre>java.lang.AssertionError: Message should be Invalid Birth Date when using 2022
+Expected: is &quot;Invalid Birth Date&quot;
+     but: was &quot;JSON parse error: Cannot deserialize value of type `java.time.LocalDate` from String \&quot;2022\&quot;: Failed to deserialize java.time.LocalDate: (java.time.format.DateTimeParseException) Text '2022' could not be parsed at index 4; nested exception is com.fasterxml.jackson.databind.exc.InvalidFormatException: Cannot deserialize value of type `java.time.LocalDate` from String \&quot;2022\&quot;: Failed to deserialize java.time.LocalDate: (java.time.format.DateTimeParseException) Text '2022' could not be parsed at index 4\n at [Source: (PushbackInputStream); line: 1, column: 190] (through reference chain: pt.ua.garage.model.Client[\&quot;birthDate\&quot;])&quot;
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at api.validators.ErrorResponseValidator.assertErrorResponse(ErrorResponseValidator.java:24)
+	at api.client.CreateClientTests.validateCreateClientBadRequest(CreateClientTests.java:99)
+	at api.client.CreateClientTests.createClientInvalidBirthDateTest(CreateClientTests.java:110)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.runTests(TestNGTestClassProcessor.java:141)
+	at org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.stop(TestNGTestClassProcessor.java:90)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:61)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
+	at com.sun.proxy.$Proxy5.stop(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:193)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60)
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:133)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="createClientInvalidBirthDateTest[5](06-06-2022)"></a>
+<h3 class="failures">createClientInvalidBirthDateTest[5](06-06-2022)</h3>
+<span class="code">
+<pre>java.lang.AssertionError: Message should be Invalid Birth Date when using 06-06-2022
+Expected: is &quot;Invalid Birth Date&quot;
+     but: was &quot;JSON parse error: Cannot deserialize value of type `java.time.LocalDate` from String \&quot;06-06-2022\&quot;: Failed to deserialize java.time.LocalDate: (java.time.format.DateTimeParseException) Text '06-06-2022' could not be parsed at index 0; nested exception is com.fasterxml.jackson.databind.exc.InvalidFormatException: Cannot deserialize value of type `java.time.LocalDate` from String \&quot;06-06-2022\&quot;: Failed to deserialize java.time.LocalDate: (java.time.format.DateTimeParseException) Text '06-06-2022' could not be parsed at index 0\n at [Source: (PushbackInputStream); line: 1, column: 190] (through reference chain: pt.ua.garage.model.Client[\&quot;birthDate\&quot;])&quot;
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at api.validators.ErrorResponseValidator.assertErrorResponse(ErrorResponseValidator.java:24)
+	at api.client.CreateClientTests.validateCreateClientBadRequest(CreateClientTests.java:99)
+	at api.client.CreateClientTests.createClientInvalidBirthDateTest(CreateClientTests.java:110)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.runTests(TestNGTestClassProcessor.java:141)
+	at org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.stop(TestNGTestClassProcessor.java:90)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:61)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
+	at com.sun.proxy.$Proxy5.stop(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:193)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60)
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:133)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="createClientInvalidBirthDateTest[6](2022-06-06T12:02:56Z)"></a>
+<h3 class="failures">createClientInvalidBirthDateTest[6](2022-06-06T12:02:56Z)</h3>
+<span class="code">
+<pre>java.lang.AssertionError: Message should be Invalid Birth Date when using 2022-06-06T12:02:56Z
+Expected: is &quot;Invalid Birth Date&quot;
+     but: was &quot;JSON parse error: Cannot deserialize value of type `java.time.LocalDate` from String \&quot;2022-06-06T12:02:56Z\&quot;: Failed to deserialize java.time.LocalDate: (java.time.format.DateTimeParseException) Text '2022-06-06T12:02:56Z' could not be parsed, unparsed text found at index 10; nested exception is com.fasterxml.jackson.databind.exc.InvalidFormatException: Cannot deserialize value of type `java.time.LocalDate` from String \&quot;2022-06-06T12:02:56Z\&quot;: Failed to deserialize java.time.LocalDate: (java.time.format.DateTimeParseException) Text '2022-06-06T12:02:56Z' could not be parsed, unparsed text found at index 10\n at [Source: (PushbackInputStream); line: 1, column: 190] (through reference chain: pt.ua.garage.model.Client[\&quot;birthDate\&quot;])&quot;
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at api.validators.ErrorResponseValidator.assertErrorResponse(ErrorResponseValidator.java:24)
+	at api.client.CreateClientTests.validateCreateClientBadRequest(CreateClientTests.java:99)
+	at api.client.CreateClientTests.createClientInvalidBirthDateTest(CreateClientTests.java:110)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.runTests(TestNGTestClassProcessor.java:141)
+	at org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.stop(TestNGTestClassProcessor.java:90)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:61)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
+	at com.sun.proxy.$Proxy5.stop(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:193)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60)
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:133)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="createClientInvalidClientDateTest[0](2022-13-06)"></a>
+<h3 class="failures">createClientInvalidClientDateTest[0](2022-13-06)</h3>
+<span class="code">
+<pre>java.lang.AssertionError: Message should be Invalid Client Date when using 2022-13-06
+Expected: is &quot;Invalid Client Date&quot;
+     but: was &quot;JSON parse error: Cannot deserialize value of type `java.time.LocalDate` from String \&quot;2022-13-06\&quot;: Failed to deserialize java.time.LocalDate: (java.time.format.DateTimeParseException) Text '2022-13-06' could not be parsed: Invalid value for MonthOfYear (valid values 1 - 12): 13; nested exception is com.fasterxml.jackson.databind.exc.InvalidFormatException: Cannot deserialize value of type `java.time.LocalDate` from String \&quot;2022-13-06\&quot;: Failed to deserialize java.time.LocalDate: (java.time.format.DateTimeParseException) Text '2022-13-06' could not be parsed: Invalid value for MonthOfYear (valid values 1 - 12): 13\n at [Source: (PushbackInputStream); line: 1, column: 216] (through reference chain: pt.ua.garage.model.Client[\&quot;clientDate\&quot;])&quot;
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at api.validators.ErrorResponseValidator.assertErrorResponse(ErrorResponseValidator.java:24)
+	at api.client.CreateClientTests.validateCreateClientBadRequest(CreateClientTests.java:99)
+	at api.client.CreateClientTests.createClientInvalidClientDateTest(CreateClientTests.java:121)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.runTests(TestNGTestClassProcessor.java:141)
+	at org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.stop(TestNGTestClassProcessor.java:90)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:61)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
+	at com.sun.proxy.$Proxy5.stop(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:193)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60)
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:133)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="createClientInvalidClientDateTest[1](2022-06-32)"></a>
+<h3 class="failures">createClientInvalidClientDateTest[1](2022-06-32)</h3>
+<span class="code">
+<pre>java.lang.AssertionError: Message should be Invalid Client Date when using 2022-06-32
+Expected: is &quot;Invalid Client Date&quot;
+     but: was &quot;JSON parse error: Cannot deserialize value of type `java.time.LocalDate` from String \&quot;2022-06-32\&quot;: Failed to deserialize java.time.LocalDate: (java.time.format.DateTimeParseException) Text '2022-06-32' could not be parsed: Invalid value for DayOfMonth (valid values 1 - 28/31): 32; nested exception is com.fasterxml.jackson.databind.exc.InvalidFormatException: Cannot deserialize value of type `java.time.LocalDate` from String \&quot;2022-06-32\&quot;: Failed to deserialize java.time.LocalDate: (java.time.format.DateTimeParseException) Text '2022-06-32' could not be parsed: Invalid value for DayOfMonth (valid values 1 - 28/31): 32\n at [Source: (PushbackInputStream); line: 1, column: 216] (through reference chain: pt.ua.garage.model.Client[\&quot;clientDate\&quot;])&quot;
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at api.validators.ErrorResponseValidator.assertErrorResponse(ErrorResponseValidator.java:24)
+	at api.client.CreateClientTests.validateCreateClientBadRequest(CreateClientTests.java:99)
+	at api.client.CreateClientTests.createClientInvalidClientDateTest(CreateClientTests.java:121)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.runTests(TestNGTestClassProcessor.java:141)
+	at org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.stop(TestNGTestClassProcessor.java:90)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:61)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
+	at com.sun.proxy.$Proxy5.stop(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:193)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60)
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:133)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="createClientInvalidClientDateTest[2](2022/06/06)"></a>
+<h3 class="failures">createClientInvalidClientDateTest[2](2022/06/06)</h3>
+<span class="code">
+<pre>java.lang.AssertionError: Message should be Invalid Client Date when using 2022/06/06
+Expected: is &quot;Invalid Client Date&quot;
+     but: was &quot;JSON parse error: Cannot deserialize value of type `java.time.LocalDate` from String \&quot;2022/06/06\&quot;: Failed to deserialize java.time.LocalDate: (java.time.format.DateTimeParseException) Text '2022/06/06' could not be parsed at index 4; nested exception is com.fasterxml.jackson.databind.exc.InvalidFormatException: Cannot deserialize value of type `java.time.LocalDate` from String \&quot;2022/06/06\&quot;: Failed to deserialize java.time.LocalDate: (java.time.format.DateTimeParseException) Text '2022/06/06' could not be parsed at index 4\n at [Source: (PushbackInputStream); line: 1, column: 216] (through reference chain: pt.ua.garage.model.Client[\&quot;clientDate\&quot;])&quot;
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at api.validators.ErrorResponseValidator.assertErrorResponse(ErrorResponseValidator.java:24)
+	at api.client.CreateClientTests.validateCreateClientBadRequest(CreateClientTests.java:99)
+	at api.client.CreateClientTests.createClientInvalidClientDateTest(CreateClientTests.java:121)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.runTests(TestNGTestClassProcessor.java:141)
+	at org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.stop(TestNGTestClassProcessor.java:90)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:61)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
+	at com.sun.proxy.$Proxy5.stop(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:193)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60)
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:133)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="createClientInvalidClientDateTest[3](2022 06 06)"></a>
+<h3 class="failures">createClientInvalidClientDateTest[3](2022 06 06)</h3>
+<span class="code">
+<pre>java.lang.AssertionError: Message should be Invalid Client Date when using 2022 06 06
+Expected: is &quot;Invalid Client Date&quot;
+     but: was &quot;JSON parse error: Cannot deserialize value of type `java.time.LocalDate` from String \&quot;2022 06 06\&quot;: Failed to deserialize java.time.LocalDate: (java.time.format.DateTimeParseException) Text '2022 06 06' could not be parsed at index 4; nested exception is com.fasterxml.jackson.databind.exc.InvalidFormatException: Cannot deserialize value of type `java.time.LocalDate` from String \&quot;2022 06 06\&quot;: Failed to deserialize java.time.LocalDate: (java.time.format.DateTimeParseException) Text '2022 06 06' could not be parsed at index 4\n at [Source: (PushbackInputStream); line: 1, column: 216] (through reference chain: pt.ua.garage.model.Client[\&quot;clientDate\&quot;])&quot;
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at api.validators.ErrorResponseValidator.assertErrorResponse(ErrorResponseValidator.java:24)
+	at api.client.CreateClientTests.validateCreateClientBadRequest(CreateClientTests.java:99)
+	at api.client.CreateClientTests.createClientInvalidClientDateTest(CreateClientTests.java:121)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.runTests(TestNGTestClassProcessor.java:141)
+	at org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.stop(TestNGTestClassProcessor.java:90)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:61)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
+	at com.sun.proxy.$Proxy5.stop(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:193)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60)
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:133)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="createClientInvalidClientDateTest[4](2022)"></a>
+<h3 class="failures">createClientInvalidClientDateTest[4](2022)</h3>
+<span class="code">
+<pre>java.lang.AssertionError: Message should be Invalid Client Date when using 2022
+Expected: is &quot;Invalid Client Date&quot;
+     but: was &quot;JSON parse error: Cannot deserialize value of type `java.time.LocalDate` from String \&quot;2022\&quot;: Failed to deserialize java.time.LocalDate: (java.time.format.DateTimeParseException) Text '2022' could not be parsed at index 4; nested exception is com.fasterxml.jackson.databind.exc.InvalidFormatException: Cannot deserialize value of type `java.time.LocalDate` from String \&quot;2022\&quot;: Failed to deserialize java.time.LocalDate: (java.time.format.DateTimeParseException) Text '2022' could not be parsed at index 4\n at [Source: (PushbackInputStream); line: 1, column: 216] (through reference chain: pt.ua.garage.model.Client[\&quot;clientDate\&quot;])&quot;
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at api.validators.ErrorResponseValidator.assertErrorResponse(ErrorResponseValidator.java:24)
+	at api.client.CreateClientTests.validateCreateClientBadRequest(CreateClientTests.java:99)
+	at api.client.CreateClientTests.createClientInvalidClientDateTest(CreateClientTests.java:121)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.runTests(TestNGTestClassProcessor.java:141)
+	at org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.stop(TestNGTestClassProcessor.java:90)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:61)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
+	at com.sun.proxy.$Proxy5.stop(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:193)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60)
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:133)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="createClientInvalidClientDateTest[5](06-06-2022)"></a>
+<h3 class="failures">createClientInvalidClientDateTest[5](06-06-2022)</h3>
+<span class="code">
+<pre>java.lang.AssertionError: Message should be Invalid Client Date when using 06-06-2022
+Expected: is &quot;Invalid Client Date&quot;
+     but: was &quot;JSON parse error: Cannot deserialize value of type `java.time.LocalDate` from String \&quot;06-06-2022\&quot;: Failed to deserialize java.time.LocalDate: (java.time.format.DateTimeParseException) Text '06-06-2022' could not be parsed at index 0; nested exception is com.fasterxml.jackson.databind.exc.InvalidFormatException: Cannot deserialize value of type `java.time.LocalDate` from String \&quot;06-06-2022\&quot;: Failed to deserialize java.time.LocalDate: (java.time.format.DateTimeParseException) Text '06-06-2022' could not be parsed at index 0\n at [Source: (PushbackInputStream); line: 1, column: 216] (through reference chain: pt.ua.garage.model.Client[\&quot;clientDate\&quot;])&quot;
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at api.validators.ErrorResponseValidator.assertErrorResponse(ErrorResponseValidator.java:24)
+	at api.client.CreateClientTests.validateCreateClientBadRequest(CreateClientTests.java:99)
+	at api.client.CreateClientTests.createClientInvalidClientDateTest(CreateClientTests.java:121)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.runTests(TestNGTestClassProcessor.java:141)
+	at org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.stop(TestNGTestClassProcessor.java:90)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:61)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
+	at com.sun.proxy.$Proxy5.stop(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:193)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60)
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:133)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="createClientInvalidClientDateTest[6](2022-06-06T12:02:56Z)"></a>
+<h3 class="failures">createClientInvalidClientDateTest[6](2022-06-06T12:02:56Z)</h3>
+<span class="code">
+<pre>java.lang.AssertionError: Message should be Invalid Client Date when using 2022-06-06T12:02:56Z
+Expected: is &quot;Invalid Client Date&quot;
+     but: was &quot;JSON parse error: Cannot deserialize value of type `java.time.LocalDate` from String \&quot;2022-06-06T12:02:56Z\&quot;: Failed to deserialize java.time.LocalDate: (java.time.format.DateTimeParseException) Text '2022-06-06T12:02:56Z' could not be parsed, unparsed text found at index 10; nested exception is com.fasterxml.jackson.databind.exc.InvalidFormatException: Cannot deserialize value of type `java.time.LocalDate` from String \&quot;2022-06-06T12:02:56Z\&quot;: Failed to deserialize java.time.LocalDate: (java.time.format.DateTimeParseException) Text '2022-06-06T12:02:56Z' could not be parsed, unparsed text found at index 10\n at [Source: (PushbackInputStream); line: 1, column: 216] (through reference chain: pt.ua.garage.model.Client[\&quot;clientDate\&quot;])&quot;
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at api.validators.ErrorResponseValidator.assertErrorResponse(ErrorResponseValidator.java:24)
+	at api.client.CreateClientTests.validateCreateClientBadRequest(CreateClientTests.java:99)
+	at api.client.CreateClientTests.createClientInvalidClientDateTest(CreateClientTests.java:121)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.runTests(TestNGTestClassProcessor.java:141)
+	at org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.stop(TestNGTestClassProcessor.java:90)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:61)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
+	at com.sun.proxy.$Proxy5.stop(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:193)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60)
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:133)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="createClientInvalidPostalCodeTest[0](3500300)"></a>
+<h3 class="failures">createClientInvalidPostalCodeTest[0](3500300)</h3>
+<span class="code">
+<pre>java.lang.AssertionError: Expected response code to be [400] but was [201]
+Expected: is &lt;400&gt;
+     but: was &lt;201&gt;
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at api.validators.ResponseHttpCodeValidator.assertBadRequest(ResponseHttpCodeValidator.java:47)
+	at api.client.CreateClientTests.validateCreateClientBadRequest(CreateClientTests.java:68)
+	at api.client.CreateClientTests.createClientInvalidPostalCodeTest(CreateClientTests.java:155)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.runTests(TestNGTestClassProcessor.java:141)
+	at org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.stop(TestNGTestClassProcessor.java:90)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:61)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
+	at com.sun.proxy.$Proxy5.stop(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:193)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60)
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:133)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="createClientInvalidPostalCodeTest[1](3500 300)"></a>
+<h3 class="failures">createClientInvalidPostalCodeTest[1](3500 300)</h3>
+<span class="code">
+<pre>java.lang.AssertionError: Expected response code to be [400] but was [201]
+Expected: is &lt;400&gt;
+     but: was &lt;201&gt;
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at api.validators.ResponseHttpCodeValidator.assertBadRequest(ResponseHttpCodeValidator.java:47)
+	at api.client.CreateClientTests.validateCreateClientBadRequest(CreateClientTests.java:68)
+	at api.client.CreateClientTests.createClientInvalidPostalCodeTest(CreateClientTests.java:155)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.runTests(TestNGTestClassProcessor.java:141)
+	at org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.stop(TestNGTestClassProcessor.java:90)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:61)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
+	at com.sun.proxy.$Proxy5.stop(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:193)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60)
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:133)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="createClientInvalidPostalCodeTest[2](300-3500)"></a>
+<h3 class="failures">createClientInvalidPostalCodeTest[2](300-3500)</h3>
+<span class="code">
+<pre>java.lang.AssertionError: Expected response code to be [400] but was [201]
+Expected: is &lt;400&gt;
+     but: was &lt;201&gt;
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at api.validators.ResponseHttpCodeValidator.assertBadRequest(ResponseHttpCodeValidator.java:47)
+	at api.client.CreateClientTests.validateCreateClientBadRequest(CreateClientTests.java:68)
+	at api.client.CreateClientTests.createClientInvalidPostalCodeTest(CreateClientTests.java:155)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.runTests(TestNGTestClassProcessor.java:141)
+	at org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.stop(TestNGTestClassProcessor.java:90)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:61)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
+	at com.sun.proxy.$Proxy5.stop(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:193)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60)
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:133)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="createClientInvalidPostalCodeTest[3](3500-abc)"></a>
+<h3 class="failures">createClientInvalidPostalCodeTest[3](3500-abc)</h3>
+<span class="code">
+<pre>java.lang.AssertionError: Expected response code to be [400] but was [201]
+Expected: is &lt;400&gt;
+     but: was &lt;201&gt;
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at api.validators.ResponseHttpCodeValidator.assertBadRequest(ResponseHttpCodeValidator.java:47)
+	at api.client.CreateClientTests.validateCreateClientBadRequest(CreateClientTests.java:68)
+	at api.client.CreateClientTests.createClientInvalidPostalCodeTest(CreateClientTests.java:155)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.runTests(TestNGTestClassProcessor.java:141)
+	at org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.stop(TestNGTestClassProcessor.java:90)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:61)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
+	at com.sun.proxy.$Proxy5.stop(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:193)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60)
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:133)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="createClientVehiclesFromClientsNotNullTest"></a>
+<h3 class="failures">createClientVehiclesFromClientsNotNullTest</h3>
+<span class="code">
+<pre>java.lang.AssertionError: Message should be Vehicles should be null on creation when using client at vehicles is not null
+Expected: is &quot;Vehicles should be null on creation&quot;
+     but: was &quot;JSON parse error: Unresolved forward references for: ; nested exception is com.fasterxml.jackson.databind.deser.UnresolvedForwardReference: Unresolved forward references for: \n at [Source: (PushbackInputStream); line: 1, column: 355]Object id [723] (for `pt.ua.garage.model.Client`) at [Source: (PushbackInputStream); line: 1, column: 263].&quot;
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at api.validators.ErrorResponseValidator.assertErrorResponse(ErrorResponseValidator.java:24)
+	at api.client.CreateClientTests.validateCreateClientBadRequest(CreateClientTests.java:99)
+	at api.client.CreateClientTests.createClientVehiclesFromClientsNotNullTest(CreateClientTests.java:181)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.runTests(TestNGTestClassProcessor.java:141)
+	at org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.stop(TestNGTestClassProcessor.java:90)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:61)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
+	at com.sun.proxy.$Proxy5.stop(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:193)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60)
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:133)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="createClientVehiclesFromNoOneNotNullTest"></a>
+<h3 class="failures">createClientVehiclesFromNoOneNotNullTest</h3>
+<span class="code">
+<pre>java.lang.AssertionError: Expected response code to be [400] but was [201]
+Expected: is &lt;400&gt;
+     but: was &lt;201&gt;
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at api.validators.ResponseHttpCodeValidator.assertBadRequest(ResponseHttpCodeValidator.java:47)
+	at api.client.CreateClientTests.validateCreateClientBadRequest(CreateClientTests.java:68)
+	at api.client.CreateClientTests.createClientVehiclesFromNoOneNotNullTest(CreateClientTests.java:197)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.runTests(TestNGTestClassProcessor.java:141)
+	at org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.stop(TestNGTestClassProcessor.java:90)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:61)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
+	at com.sun.proxy.$Proxy5.stop(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:193)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60)
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:133)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+</pre>
+</span>
+</div>
+</div>
+<div id="tab1" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">createClientIdNotNullTest</td>
+<td class="success">0.104s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="failures">createClientInvalidBirthDateTest[0](2022-13-06)</td>
+<td class="failures">0.023s</td>
+<td class="failures">failed</td>
+</tr>
+<tr>
+<td class="failures">createClientInvalidBirthDateTest[1](2022-06-32)</td>
+<td class="failures">0.013s</td>
+<td class="failures">failed</td>
+</tr>
+<tr>
+<td class="failures">createClientInvalidBirthDateTest[2](2022/06/06)</td>
+<td class="failures">0.015s</td>
+<td class="failures">failed</td>
+</tr>
+<tr>
+<td class="failures">createClientInvalidBirthDateTest[3](2022 06 06)</td>
+<td class="failures">0.012s</td>
+<td class="failures">failed</td>
+</tr>
+<tr>
+<td class="failures">createClientInvalidBirthDateTest[4](2022)</td>
+<td class="failures">0.013s</td>
+<td class="failures">failed</td>
+</tr>
+<tr>
+<td class="failures">createClientInvalidBirthDateTest[5](06-06-2022)</td>
+<td class="failures">0.016s</td>
+<td class="failures">failed</td>
+</tr>
+<tr>
+<td class="failures">createClientInvalidBirthDateTest[6](2022-06-06T12:02:56Z)</td>
+<td class="failures">0.022s</td>
+<td class="failures">failed</td>
+</tr>
+<tr>
+<td class="failures">createClientInvalidClientDateTest[0](2022-13-06)</td>
+<td class="failures">0.020s</td>
+<td class="failures">failed</td>
+</tr>
+<tr>
+<td class="failures">createClientInvalidClientDateTest[1](2022-06-32)</td>
+<td class="failures">0.016s</td>
+<td class="failures">failed</td>
+</tr>
+<tr>
+<td class="failures">createClientInvalidClientDateTest[2](2022/06/06)</td>
+<td class="failures">0.015s</td>
+<td class="failures">failed</td>
+</tr>
+<tr>
+<td class="failures">createClientInvalidClientDateTest[3](2022 06 06)</td>
+<td class="failures">0.021s</td>
+<td class="failures">failed</td>
+</tr>
+<tr>
+<td class="failures">createClientInvalidClientDateTest[4](2022)</td>
+<td class="failures">0.018s</td>
+<td class="failures">failed</td>
+</tr>
+<tr>
+<td class="failures">createClientInvalidClientDateTest[5](06-06-2022)</td>
+<td class="failures">0.068s</td>
+<td class="failures">failed</td>
+</tr>
+<tr>
+<td class="failures">createClientInvalidClientDateTest[6](2022-06-06T12:02:56Z)</td>
+<td class="failures">0.072s</td>
+<td class="failures">failed</td>
+</tr>
+<tr>
+<td class="success">createClientInvalidNIFTest[0](1234567890)</td>
+<td class="success">0.018s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">createClientInvalidNIFTest[1](12345678)</td>
+<td class="success">0.016s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">createClientInvalidPhoneNumberTest[0](1234567890)</td>
+<td class="success">0.018s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">createClientInvalidPhoneNumberTest[1](12345678)</td>
+<td class="success">0.014s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="failures">createClientInvalidPostalCodeTest[0](3500300)</td>
+<td class="failures">0.015s</td>
+<td class="failures">failed</td>
+</tr>
+<tr>
+<td class="failures">createClientInvalidPostalCodeTest[1](3500 300)</td>
+<td class="failures">0.014s</td>
+<td class="failures">failed</td>
+</tr>
+<tr>
+<td class="failures">createClientInvalidPostalCodeTest[2](300-3500)</td>
+<td class="failures">0.014s</td>
+<td class="failures">failed</td>
+</tr>
+<tr>
+<td class="failures">createClientInvalidPostalCodeTest[3](3500-abc)</td>
+<td class="failures">0.013s</td>
+<td class="failures">failed</td>
+</tr>
+<tr>
+<td class="success">createClientTest</td>
+<td class="success">0.041s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="failures">createClientVehiclesFromClientsNotNullTest</td>
+<td class="failures">0.027s</td>
+<td class="failures">failed</td>
+</tr>
+<tr>
+<td class="failures">createClientVehiclesFromNoOneNotNullTest</td>
+<td class="failures">0.026s</td>
+<td class="failures">failed</td>
+</tr>
+</table>
+</div>
+<div id="tab2" class="tab">
+<h2>Standard error</h2>
+<span class="code">
+<pre>jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: --&gt; POST http://garage.estga.com/client
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Content-Type: application/json; charset=UTF-8
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Content-Length: 242
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: 
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: {&quot;id&quot;:null,&quot;firstName&quot;:&quot;Bruno&quot;,&quot;lastName&quot;:&quot;Lopes&quot;,&quot;address&quot;:&quot;testing street&quot;,&quot;postalCode&quot;:&quot;3500-300&quot;,&quot;city&quot;:&quot;Viseu&quot;,&quot;country&quot;:&quot;Portugal&quot;,&quot;phoneNumber&quot;:919191919,&quot;nif&quot;:123456789,&quot;birthDate&quot;:&quot;2022-06-06&quot;,&quot;clientDate&quot;:&quot;2022-06-07&quot;,&quot;vehicles&quot;:[]}
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: --&gt; END POST (242-byte body)
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: &lt;-- 201 http://garage.estga.com/client (4ms)
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Server: nginx/1.18.0 (Ubuntu)
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Date: Sat, 18 Jun 2022 11:24:54 GMT
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Content-Type: application/json
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Transfer-Encoding: chunked
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Connection: keep-alive
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: 
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: 723
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: &lt;-- END HTTP (3-byte body)
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: --&gt; POST http://garage.estga.com/vehicle
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Content-Type: application/json; charset=UTF-8
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Content-Length: 115
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: 
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: {&quot;id&quot;:null,&quot;client&quot;:null,&quot;brand&quot;:&quot;peugeot&quot;,&quot;model&quot;:&quot;207&quot;,&quot;year&quot;:2007,&quot;type&quot;:&quot;car&quot;,&quot;plate&quot;:&quot;AA-22-22&quot;,&quot;active&quot;:true}
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: --&gt; END POST (115-byte body)
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: &lt;-- 201 http://garage.estga.com/vehicle (3ms)
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Server: nginx/1.18.0 (Ubuntu)
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Date: Sat, 18 Jun 2022 11:24:54 GMT
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Content-Type: application/json
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Transfer-Encoding: chunked
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Connection: keep-alive
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: 
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: 779
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: &lt;-- END HTTP (3-byte body)
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: --&gt; POST http://garage.estga.com/vehicle
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Content-Type: application/json; charset=UTF-8
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Content-Length: 115
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: 
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: {&quot;id&quot;:null,&quot;client&quot;:null,&quot;brand&quot;:&quot;peugeot&quot;,&quot;model&quot;:&quot;207&quot;,&quot;year&quot;:2007,&quot;type&quot;:&quot;car&quot;,&quot;plate&quot;:&quot;AA-22-22&quot;,&quot;active&quot;:true}
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: --&gt; END POST (115-byte body)
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: &lt;-- 201 http://garage.estga.com/vehicle (5ms)
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Server: nginx/1.18.0 (Ubuntu)
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Date: Sat, 18 Jun 2022 11:24:54 GMT
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Content-Type: application/json
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Transfer-Encoding: chunked
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Connection: keep-alive
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: 
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: 780
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: &lt;-- END HTTP (3-byte body)
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: --&gt; PUT http://garage.estga.com/vehicle/779/client/723
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Content-Length: 0
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: 
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: 
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: --&gt; END PUT (0-byte body)
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: &lt;-- 204 http://garage.estga.com/vehicle/779/client/723 (4ms)
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Server: nginx/1.18.0 (Ubuntu)
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Date: Sat, 18 Jun 2022 11:24:54 GMT
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Connection: keep-alive
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: &lt;-- END HTTP
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: --&gt; POST http://garage.estga.com/client
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Content-Type: application/json; charset=UTF-8
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Content-Length: 239
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: 
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: {&quot;id&quot;:1,&quot;firstName&quot;:&quot;Bruno&quot;,&quot;lastName&quot;:&quot;Lopes&quot;,&quot;address&quot;:&quot;testing street&quot;,&quot;postalCode&quot;:&quot;3500-300&quot;,&quot;city&quot;:&quot;Viseu&quot;,&quot;country&quot;:&quot;Portugal&quot;,&quot;phoneNumber&quot;:919191919,&quot;nif&quot;:123456789,&quot;birthDate&quot;:&quot;2022-06-06&quot;,&quot;clientDate&quot;:&quot;2022-06-07&quot;,&quot;vehicles&quot;:[]}
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: --&gt; END POST (239-byte body)
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: &lt;-- 400 http://garage.estga.com/client (6ms)
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Server: nginx/1.18.0 (Ubuntu)
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Date: Sat, 18 Jun 2022 11:24:54 GMT
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Content-Type: application/json
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Transfer-Encoding: chunked
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Connection: keep-alive
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: 
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: {&quot;timestamp&quot;:&quot;2022-06-18T11:24:54.629+00:00&quot;,&quot;status&quot;:400,&quot;error&quot;:&quot;Bad Request&quot;,&quot;message&quot;:&quot;Id should be null on creation&quot;,&quot;path&quot;:&quot;/client&quot;}
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: &lt;-- END HTTP (139-byte body)
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: --&gt; POST http://garage.estga.com/client
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Content-Type: application/json; charset=UTF-8
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Content-Length: 242
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: 
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: {&quot;id&quot;:null,&quot;firstName&quot;:&quot;Bruno&quot;,&quot;lastName&quot;:&quot;Lopes&quot;,&quot;address&quot;:&quot;testing street&quot;,&quot;postalCode&quot;:&quot;3500-300&quot;,&quot;city&quot;:&quot;Viseu&quot;,&quot;country&quot;:&quot;Portugal&quot;,&quot;phoneNumber&quot;:919191919,&quot;nif&quot;:123456789,&quot;birthDate&quot;:&quot;2022-13-06&quot;,&quot;clientDate&quot;:&quot;2022-06-07&quot;,&quot;vehicles&quot;:[]}
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: --&gt; END POST (242-byte body)
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: &lt;-- 400 http://garage.estga.com/client (7ms)
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Server: nginx/1.18.0 (Ubuntu)
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Date: Sat, 18 Jun 2022 11:24:54 GMT
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Content-Type: application/json
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Transfer-Encoding: chunked
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Connection: keep-alive
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: 
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: {&quot;timestamp&quot;:&quot;2022-06-18T11:24:54.749+00:00&quot;,&quot;status&quot;:400,&quot;error&quot;:&quot;Bad Request&quot;,&quot;message&quot;:&quot;JSON parse error: Cannot deserialize value of type `java.time.LocalDate` from String \&quot;2022-13-06\&quot;: Failed to deserialize java.time.LocalDate: (java.time.format.DateTimeParseException) Text '2022-13-06' could not be parsed: Invalid value for MonthOfYear (valid values 1 - 12): 13; nested exception is com.fasterxml.jackson.databind.exc.InvalidFormatException: Cannot deserialize value of type `java.time.LocalDate` from String \&quot;2022-13-06\&quot;: Failed to deserialize java.time.LocalDate: (java.time.format.DateTimeParseException) Text '2022-13-06' could not be parsed: Invalid value for MonthOfYear (valid values 1 - 12): 13\n at [Source: (PushbackInputStream); line: 1, column: 190] (through reference chain: pt.ua.garage.model.Client[\&quot;birthDate\&quot;])&quot;,&quot;path&quot;:&quot;/client&quot;}
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: &lt;-- END HTTP (860-byte body)
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: --&gt; POST http://garage.estga.com/client
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Content-Type: application/json; charset=UTF-8
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Content-Length: 242
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: 
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: {&quot;id&quot;:null,&quot;firstName&quot;:&quot;Bruno&quot;,&quot;lastName&quot;:&quot;Lopes&quot;,&quot;address&quot;:&quot;testing street&quot;,&quot;postalCode&quot;:&quot;3500-300&quot;,&quot;city&quot;:&quot;Viseu&quot;,&quot;country&quot;:&quot;Portugal&quot;,&quot;phoneNumber&quot;:919191919,&quot;nif&quot;:123456789,&quot;birthDate&quot;:&quot;2022-06-32&quot;,&quot;clientDate&quot;:&quot;2022-06-07&quot;,&quot;vehicles&quot;:[]}
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: --&gt; END POST (242-byte body)
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: &lt;-- 400 http://garage.estga.com/client (5ms)
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Server: nginx/1.18.0 (Ubuntu)
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Date: Sat, 18 Jun 2022 11:24:54 GMT
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Content-Type: application/json
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Transfer-Encoding: chunked
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Connection: keep-alive
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: 
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: {&quot;timestamp&quot;:&quot;2022-06-18T11:24:54.771+00:00&quot;,&quot;status&quot;:400,&quot;error&quot;:&quot;Bad Request&quot;,&quot;message&quot;:&quot;JSON parse error: Cannot deserialize value of type `java.time.LocalDate` from String \&quot;2022-06-32\&quot;: Failed to deserialize java.time.LocalDate: (java.time.format.DateTimeParseException) Text '2022-06-32' could not be parsed: Invalid value for DayOfMonth (valid values 1 - 28/31): 32; nested exception is com.fasterxml.jackson.databind.exc.InvalidFormatException: Cannot deserialize value of type `java.time.LocalDate` from String \&quot;2022-06-32\&quot;: Failed to deserialize java.time.LocalDate: (java.time.format.DateTimeParseException) Text '2022-06-32' could not be parsed: Invalid value for DayOfMonth (valid values 1 - 28/31): 32\n at [Source: (PushbackInputStream); line: 1, column: 190] (through reference chain: pt.ua.garage.model.Client[\&quot;birthDate\&quot;])&quot;,&quot;path&quot;:&quot;/client&quot;}
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: &lt;-- END HTTP (864-byte body)
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: --&gt; POST http://garage.estga.com/client
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Content-Type: application/json; charset=UTF-8
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Content-Length: 242
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: 
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: {&quot;id&quot;:null,&quot;firstName&quot;:&quot;Bruno&quot;,&quot;lastName&quot;:&quot;Lopes&quot;,&quot;address&quot;:&quot;testing street&quot;,&quot;postalCode&quot;:&quot;3500-300&quot;,&quot;city&quot;:&quot;Viseu&quot;,&quot;country&quot;:&quot;Portugal&quot;,&quot;phoneNumber&quot;:919191919,&quot;nif&quot;:123456789,&quot;birthDate&quot;:&quot;2022/06/06&quot;,&quot;clientDate&quot;:&quot;2022-06-07&quot;,&quot;vehicles&quot;:[]}
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: --&gt; END POST (242-byte body)
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: &lt;-- 400 http://garage.estga.com/client (6ms)
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Server: nginx/1.18.0 (Ubuntu)
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Date: Sat, 18 Jun 2022 11:24:54 GMT
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Content-Type: application/json
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Transfer-Encoding: chunked
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Connection: keep-alive
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: 
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: {&quot;timestamp&quot;:&quot;2022-06-18T11:24:54.787+00:00&quot;,&quot;status&quot;:400,&quot;error&quot;:&quot;Bad Request&quot;,&quot;message&quot;:&quot;JSON parse error: Cannot deserialize value of type `java.time.LocalDate` from String \&quot;2022/06/06\&quot;: Failed to deserialize java.time.LocalDate: (java.time.format.DateTimeParseException) Text '2022/06/06' could not be parsed at index 4; nested exception is com.fasterxml.jackson.databind.exc.InvalidFormatException: Cannot deserialize value of type `java.time.LocalDate` from String \&quot;2022/06/06\&quot;: Failed to deserialize java.time.LocalDate: (java.time.format.DateTimeParseException) Text '2022/06/06' could not be parsed at index 4\n at [Source: (PushbackInputStream); line: 1, column: 190] (through reference chain: pt.ua.garage.model.Client[\&quot;birthDate\&quot;])&quot;,&quot;path&quot;:&quot;/client&quot;}
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: &lt;-- END HTTP (768-byte body)
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: --&gt; POST http://garage.estga.com/client
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Content-Type: application/json; charset=UTF-8
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Content-Length: 242
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: 
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: {&quot;id&quot;:null,&quot;firstName&quot;:&quot;Bruno&quot;,&quot;lastName&quot;:&quot;Lopes&quot;,&quot;address&quot;:&quot;testing street&quot;,&quot;postalCode&quot;:&quot;3500-300&quot;,&quot;city&quot;:&quot;Viseu&quot;,&quot;country&quot;:&quot;Portugal&quot;,&quot;phoneNumber&quot;:919191919,&quot;nif&quot;:123456789,&quot;birthDate&quot;:&quot;2022 06 06&quot;,&quot;clientDate&quot;:&quot;2022-06-07&quot;,&quot;vehicles&quot;:[]}
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: --&gt; END POST (242-byte body)
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: &lt;-- 400 http://garage.estga.com/client (5ms)
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Server: nginx/1.18.0 (Ubuntu)
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Date: Sat, 18 Jun 2022 11:24:54 GMT
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Content-Type: application/json
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Transfer-Encoding: chunked
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Connection: keep-alive
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: 
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: {&quot;timestamp&quot;:&quot;2022-06-18T11:24:54.801+00:00&quot;,&quot;status&quot;:400,&quot;error&quot;:&quot;Bad Request&quot;,&quot;message&quot;:&quot;JSON parse error: Cannot deserialize value of type `java.time.LocalDate` from String \&quot;2022 06 06\&quot;: Failed to deserialize java.time.LocalDate: (java.time.format.DateTimeParseException) Text '2022 06 06' could not be parsed at index 4; nested exception is com.fasterxml.jackson.databind.exc.InvalidFormatException: Cannot deserialize value of type `java.time.LocalDate` from String \&quot;2022 06 06\&quot;: Failed to deserialize java.time.LocalDate: (java.time.format.DateTimeParseException) Text '2022 06 06' could not be parsed at index 4\n at [Source: (PushbackInputStream); line: 1, column: 190] (through reference chain: pt.ua.garage.model.Client[\&quot;birthDate\&quot;])&quot;,&quot;path&quot;:&quot;/client&quot;}
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: &lt;-- END HTTP (768-byte body)
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: --&gt; POST http://garage.estga.com/client
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Content-Type: application/json; charset=UTF-8
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Content-Length: 236
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: 
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: {&quot;id&quot;:null,&quot;firstName&quot;:&quot;Bruno&quot;,&quot;lastName&quot;:&quot;Lopes&quot;,&quot;address&quot;:&quot;testing street&quot;,&quot;postalCode&quot;:&quot;3500-300&quot;,&quot;city&quot;:&quot;Viseu&quot;,&quot;country&quot;:&quot;Portugal&quot;,&quot;phoneNumber&quot;:919191919,&quot;nif&quot;:123456789,&quot;birthDate&quot;:&quot;2022&quot;,&quot;clientDate&quot;:&quot;2022-06-07&quot;,&quot;vehicles&quot;:[]}
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: --&gt; END POST (236-byte body)
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: &lt;-- 400 http://garage.estga.com/client (4ms)
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Server: nginx/1.18.0 (Ubuntu)
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Date: Sat, 18 Jun 2022 11:24:54 GMT
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Content-Type: application/json
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Transfer-Encoding: chunked
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Connection: keep-alive
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: 
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: {&quot;timestamp&quot;:&quot;2022-06-18T11:24:54.815+00:00&quot;,&quot;status&quot;:400,&quot;error&quot;:&quot;Bad Request&quot;,&quot;message&quot;:&quot;JSON parse error: Cannot deserialize value of type `java.time.LocalDate` from String \&quot;2022\&quot;: Failed to deserialize java.time.LocalDate: (java.time.format.DateTimeParseException) Text '2022' could not be parsed at index 4; nested exception is com.fasterxml.jackson.databind.exc.InvalidFormatException: Cannot deserialize value of type `java.time.LocalDate` from String \&quot;2022\&quot;: Failed to deserialize java.time.LocalDate: (java.time.format.DateTimeParseException) Text '2022' could not be parsed at index 4\n at [Source: (PushbackInputStream); line: 1, column: 190] (through reference chain: pt.ua.garage.model.Client[\&quot;birthDate\&quot;])&quot;,&quot;path&quot;:&quot;/client&quot;}
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: &lt;-- END HTTP (744-byte body)
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: --&gt; POST http://garage.estga.com/client
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Content-Type: application/json; charset=UTF-8
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Content-Length: 242
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: 
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: {&quot;id&quot;:null,&quot;firstName&quot;:&quot;Bruno&quot;,&quot;lastName&quot;:&quot;Lopes&quot;,&quot;address&quot;:&quot;testing street&quot;,&quot;postalCode&quot;:&quot;3500-300&quot;,&quot;city&quot;:&quot;Viseu&quot;,&quot;country&quot;:&quot;Portugal&quot;,&quot;phoneNumber&quot;:919191919,&quot;nif&quot;:123456789,&quot;birthDate&quot;:&quot;06-06-2022&quot;,&quot;clientDate&quot;:&quot;2022-06-07&quot;,&quot;vehicles&quot;:[]}
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: --&gt; END POST (242-byte body)
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: &lt;-- 400 http://garage.estga.com/client (5ms)
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Server: nginx/1.18.0 (Ubuntu)
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Date: Sat, 18 Jun 2022 11:24:54 GMT
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Content-Type: application/json
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Transfer-Encoding: chunked
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Connection: keep-alive
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: 
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: {&quot;timestamp&quot;:&quot;2022-06-18T11:24:54.830+00:00&quot;,&quot;status&quot;:400,&quot;error&quot;:&quot;Bad Request&quot;,&quot;message&quot;:&quot;JSON parse error: Cannot deserialize value of type `java.time.LocalDate` from String \&quot;06-06-2022\&quot;: Failed to deserialize java.time.LocalDate: (java.time.format.DateTimeParseException) Text '06-06-2022' could not be parsed at index 0; nested exception is com.fasterxml.jackson.databind.exc.InvalidFormatException: Cannot deserialize value of type `java.time.LocalDate` from String \&quot;06-06-2022\&quot;: Failed to deserialize java.time.LocalDate: (java.time.format.DateTimeParseException) Text '06-06-2022' could not be parsed at index 0\n at [Source: (PushbackInputStream); line: 1, column: 190] (through reference chain: pt.ua.garage.model.Client[\&quot;birthDate\&quot;])&quot;,&quot;path&quot;:&quot;/client&quot;}
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: &lt;-- END HTTP (768-byte body)
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: --&gt; POST http://garage.estga.com/client
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Content-Type: application/json; charset=UTF-8
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Content-Length: 252
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: 
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: {&quot;id&quot;:null,&quot;firstName&quot;:&quot;Bruno&quot;,&quot;lastName&quot;:&quot;Lopes&quot;,&quot;address&quot;:&quot;testing street&quot;,&quot;postalCode&quot;:&quot;3500-300&quot;,&quot;city&quot;:&quot;Viseu&quot;,&quot;country&quot;:&quot;Portugal&quot;,&quot;phoneNumber&quot;:919191919,&quot;nif&quot;:123456789,&quot;birthDate&quot;:&quot;2022-06-06T12:02:56Z&quot;,&quot;clientDate&quot;:&quot;2022-06-07&quot;,&quot;vehicles&quot;:[]}
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: --&gt; END POST (252-byte body)
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: &lt;-- 400 http://garage.estga.com/client (5ms)
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Server: nginx/1.18.0 (Ubuntu)
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Date: Sat, 18 Jun 2022 11:24:54 GMT
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Content-Type: application/json
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Transfer-Encoding: chunked
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Connection: keep-alive
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: 
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: {&quot;timestamp&quot;:&quot;2022-06-18T11:24:54.848+00:00&quot;,&quot;status&quot;:400,&quot;error&quot;:&quot;Bad Request&quot;,&quot;message&quot;:&quot;JSON parse error: Cannot deserialize value of type `java.time.LocalDate` from String \&quot;2022-06-06T12:02:56Z\&quot;: Failed to deserialize java.time.LocalDate: (java.time.format.DateTimeParseException) Text '2022-06-06T12:02:56Z' could not be parsed, unparsed text found at index 10; nested exception is com.fasterxml.jackson.databind.exc.InvalidFormatException: Cannot deserialize value of type `java.time.LocalDate` from String \&quot;2022-06-06T12:02:56Z\&quot;: Failed to deserialize java.time.LocalDate: (java.time.format.DateTimeParseException) Text '2022-06-06T12:02:56Z' could not be parsed, unparsed text found at index 10\n at [Source: (PushbackInputStream); line: 1, column: 190] (through reference chain: pt.ua.garage.model.Client[\&quot;birthDate\&quot;])&quot;,&quot;path&quot;:&quot;/client&quot;}
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: &lt;-- END HTTP (852-byte body)
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: --&gt; POST http://garage.estga.com/client
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Content-Type: application/json; charset=UTF-8
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Content-Length: 242
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: 
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: {&quot;id&quot;:null,&quot;firstName&quot;:&quot;Bruno&quot;,&quot;lastName&quot;:&quot;Lopes&quot;,&quot;address&quot;:&quot;testing street&quot;,&quot;postalCode&quot;:&quot;3500-300&quot;,&quot;city&quot;:&quot;Viseu&quot;,&quot;country&quot;:&quot;Portugal&quot;,&quot;phoneNumber&quot;:919191919,&quot;nif&quot;:123456789,&quot;birthDate&quot;:&quot;2022-06-06&quot;,&quot;clientDate&quot;:&quot;2022-13-06&quot;,&quot;vehicles&quot;:[]}
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: --&gt; END POST (242-byte body)
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: &lt;-- 400 http://garage.estga.com/client (8ms)
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Server: nginx/1.18.0 (Ubuntu)
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Date: Sat, 18 Jun 2022 11:24:54 GMT
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Content-Type: application/json
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Transfer-Encoding: chunked
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Connection: keep-alive
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: 
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: {&quot;timestamp&quot;:&quot;2022-06-18T11:24:54.882+00:00&quot;,&quot;status&quot;:400,&quot;error&quot;:&quot;Bad Request&quot;,&quot;message&quot;:&quot;JSON parse error: Cannot deserialize value of type `java.time.LocalDate` from String \&quot;2022-13-06\&quot;: Failed to deserialize java.time.LocalDate: (java.time.format.DateTimeParseException) Text '2022-13-06' could not be parsed: Invalid value for MonthOfYear (valid values 1 - 12): 13; nested exception is com.fasterxml.jackson.databind.exc.InvalidFormatException: Cannot deserialize value of type `java.time.LocalDate` from String \&quot;2022-13-06\&quot;: Failed to deserialize java.time.LocalDate: (java.time.format.DateTimeParseException) Text '2022-13-06' could not be parsed: Invalid value for MonthOfYear (valid values 1 - 12): 13\n at [Source: (PushbackInputStream); line: 1, column: 216] (through reference chain: pt.ua.garage.model.Client[\&quot;clientDate\&quot;])&quot;,&quot;path&quot;:&quot;/client&quot;}
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: &lt;-- END HTTP (861-byte body)
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: --&gt; POST http://garage.estga.com/client
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Content-Type: application/json; charset=UTF-8
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Content-Length: 242
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: 
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: {&quot;id&quot;:null,&quot;firstName&quot;:&quot;Bruno&quot;,&quot;lastName&quot;:&quot;Lopes&quot;,&quot;address&quot;:&quot;testing street&quot;,&quot;postalCode&quot;:&quot;3500-300&quot;,&quot;city&quot;:&quot;Viseu&quot;,&quot;country&quot;:&quot;Portugal&quot;,&quot;phoneNumber&quot;:919191919,&quot;nif&quot;:123456789,&quot;birthDate&quot;:&quot;2022-06-06&quot;,&quot;clientDate&quot;:&quot;2022-06-32&quot;,&quot;vehicles&quot;:[]}
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: --&gt; END POST (242-byte body)
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: &lt;-- 400 http://garage.estga.com/client (9ms)
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Server: nginx/1.18.0 (Ubuntu)
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Date: Sat, 18 Jun 2022 11:24:54 GMT
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Content-Type: application/json
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Transfer-Encoding: chunked
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Connection: keep-alive
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: 
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: {&quot;timestamp&quot;:&quot;2022-06-18T11:24:54.900+00:00&quot;,&quot;status&quot;:400,&quot;error&quot;:&quot;Bad Request&quot;,&quot;message&quot;:&quot;JSON parse error: Cannot deserialize value of type `java.time.LocalDate` from String \&quot;2022-06-32\&quot;: Failed to deserialize java.time.LocalDate: (java.time.format.DateTimeParseException) Text '2022-06-32' could not be parsed: Invalid value for DayOfMonth (valid values 1 - 28/31): 32; nested exception is com.fasterxml.jackson.databind.exc.InvalidFormatException: Cannot deserialize value of type `java.time.LocalDate` from String \&quot;2022-06-32\&quot;: Failed to deserialize java.time.LocalDate: (java.time.format.DateTimeParseException) Text '2022-06-32' could not be parsed: Invalid value for DayOfMonth (valid values 1 - 28/31): 32\n at [Source: (PushbackInputStream); line: 1, column: 216] (through reference chain: pt.ua.garage.model.Client[\&quot;clientDate\&quot;])&quot;,&quot;path&quot;:&quot;/client&quot;}
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: &lt;-- END HTTP (865-byte body)
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: --&gt; POST http://garage.estga.com/client
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Content-Type: application/json; charset=UTF-8
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Content-Length: 242
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: 
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: {&quot;id&quot;:null,&quot;firstName&quot;:&quot;Bruno&quot;,&quot;lastName&quot;:&quot;Lopes&quot;,&quot;address&quot;:&quot;testing street&quot;,&quot;postalCode&quot;:&quot;3500-300&quot;,&quot;city&quot;:&quot;Viseu&quot;,&quot;country&quot;:&quot;Portugal&quot;,&quot;phoneNumber&quot;:919191919,&quot;nif&quot;:123456789,&quot;birthDate&quot;:&quot;2022-06-06&quot;,&quot;clientDate&quot;:&quot;2022/06/06&quot;,&quot;vehicles&quot;:[]}
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: --&gt; END POST (242-byte body)
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: &lt;-- 400 http://garage.estga.com/client (7ms)
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Server: nginx/1.18.0 (Ubuntu)
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Date: Sat, 18 Jun 2022 11:24:54 GMT
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Content-Type: application/json
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Transfer-Encoding: chunked
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Connection: keep-alive
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: 
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: {&quot;timestamp&quot;:&quot;2022-06-18T11:24:54.915+00:00&quot;,&quot;status&quot;:400,&quot;error&quot;:&quot;Bad Request&quot;,&quot;message&quot;:&quot;JSON parse error: Cannot deserialize value of type `java.time.LocalDate` from String \&quot;2022/06/06\&quot;: Failed to deserialize java.time.LocalDate: (java.time.format.DateTimeParseException) Text '2022/06/06' could not be parsed at index 4; nested exception is com.fasterxml.jackson.databind.exc.InvalidFormatException: Cannot deserialize value of type `java.time.LocalDate` from String \&quot;2022/06/06\&quot;: Failed to deserialize java.time.LocalDate: (java.time.format.DateTimeParseException) Text '2022/06/06' could not be parsed at index 4\n at [Source: (PushbackInputStream); line: 1, column: 216] (through reference chain: pt.ua.garage.model.Client[\&quot;clientDate\&quot;])&quot;,&quot;path&quot;:&quot;/client&quot;}
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: &lt;-- END HTTP (769-byte body)
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: --&gt; POST http://garage.estga.com/client
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Content-Type: application/json; charset=UTF-8
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Content-Length: 242
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: 
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: {&quot;id&quot;:null,&quot;firstName&quot;:&quot;Bruno&quot;,&quot;lastName&quot;:&quot;Lopes&quot;,&quot;address&quot;:&quot;testing street&quot;,&quot;postalCode&quot;:&quot;3500-300&quot;,&quot;city&quot;:&quot;Viseu&quot;,&quot;country&quot;:&quot;Portugal&quot;,&quot;phoneNumber&quot;:919191919,&quot;nif&quot;:123456789,&quot;birthDate&quot;:&quot;2022-06-06&quot;,&quot;clientDate&quot;:&quot;2022 06 06&quot;,&quot;vehicles&quot;:[]}
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: --&gt; END POST (242-byte body)
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: &lt;-- 400 http://garage.estga.com/client (7ms)
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Server: nginx/1.18.0 (Ubuntu)
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Date: Sat, 18 Jun 2022 11:24:54 GMT
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Content-Type: application/json
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Transfer-Encoding: chunked
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Connection: keep-alive
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: 
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: {&quot;timestamp&quot;:&quot;2022-06-18T11:24:54.938+00:00&quot;,&quot;status&quot;:400,&quot;error&quot;:&quot;Bad Request&quot;,&quot;message&quot;:&quot;JSON parse error: Cannot deserialize value of type `java.time.LocalDate` from String \&quot;2022 06 06\&quot;: Failed to deserialize java.time.LocalDate: (java.time.format.DateTimeParseException) Text '2022 06 06' could not be parsed at index 4; nested exception is com.fasterxml.jackson.databind.exc.InvalidFormatException: Cannot deserialize value of type `java.time.LocalDate` from String \&quot;2022 06 06\&quot;: Failed to deserialize java.time.LocalDate: (java.time.format.DateTimeParseException) Text '2022 06 06' could not be parsed at index 4\n at [Source: (PushbackInputStream); line: 1, column: 216] (through reference chain: pt.ua.garage.model.Client[\&quot;clientDate\&quot;])&quot;,&quot;path&quot;:&quot;/client&quot;}
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: &lt;-- END HTTP (769-byte body)
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: --&gt; POST http://garage.estga.com/client
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Content-Type: application/json; charset=UTF-8
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Content-Length: 236
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: 
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: {&quot;id&quot;:null,&quot;firstName&quot;:&quot;Bruno&quot;,&quot;lastName&quot;:&quot;Lopes&quot;,&quot;address&quot;:&quot;testing street&quot;,&quot;postalCode&quot;:&quot;3500-300&quot;,&quot;city&quot;:&quot;Viseu&quot;,&quot;country&quot;:&quot;Portugal&quot;,&quot;phoneNumber&quot;:919191919,&quot;nif&quot;:123456789,&quot;birthDate&quot;:&quot;2022-06-06&quot;,&quot;clientDate&quot;:&quot;2022&quot;,&quot;vehicles&quot;:[]}
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: --&gt; END POST (236-byte body)
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: &lt;-- 400 http://garage.estga.com/client (9ms)
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Server: nginx/1.18.0 (Ubuntu)
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Date: Sat, 18 Jun 2022 11:24:54 GMT
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Content-Type: application/json
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Transfer-Encoding: chunked
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Connection: keep-alive
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: 
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: {&quot;timestamp&quot;:&quot;2022-06-18T11:24:54.958+00:00&quot;,&quot;status&quot;:400,&quot;error&quot;:&quot;Bad Request&quot;,&quot;message&quot;:&quot;JSON parse error: Cannot deserialize value of type `java.time.LocalDate` from String \&quot;2022\&quot;: Failed to deserialize java.time.LocalDate: (java.time.format.DateTimeParseException) Text '2022' could not be parsed at index 4; nested exception is com.fasterxml.jackson.databind.exc.InvalidFormatException: Cannot deserialize value of type `java.time.LocalDate` from String \&quot;2022\&quot;: Failed to deserialize java.time.LocalDate: (java.time.format.DateTimeParseException) Text '2022' could not be parsed at index 4\n at [Source: (PushbackInputStream); line: 1, column: 216] (through reference chain: pt.ua.garage.model.Client[\&quot;clientDate\&quot;])&quot;,&quot;path&quot;:&quot;/client&quot;}
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: &lt;-- END HTTP (745-byte body)
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: --&gt; POST http://garage.estga.com/client
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Content-Type: application/json; charset=UTF-8
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Content-Length: 242
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: 
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: {&quot;id&quot;:null,&quot;firstName&quot;:&quot;Bruno&quot;,&quot;lastName&quot;:&quot;Lopes&quot;,&quot;address&quot;:&quot;testing street&quot;,&quot;postalCode&quot;:&quot;3500-300&quot;,&quot;city&quot;:&quot;Viseu&quot;,&quot;country&quot;:&quot;Portugal&quot;,&quot;phoneNumber&quot;:919191919,&quot;nif&quot;:123456789,&quot;birthDate&quot;:&quot;2022-06-06&quot;,&quot;clientDate&quot;:&quot;06-06-2022&quot;,&quot;vehicles&quot;:[]}
+jun. 18, 2022 12:24:54 DA TARDE okhttp3.internal.platform.Platform log
+INFO: --&gt; END POST (242-byte body)
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: &lt;-- 400 http://garage.estga.com/client (54ms)
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Server: nginx/1.18.0 (Ubuntu)
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Date: Sat, 18 Jun 2022 11:24:55 GMT
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Content-Type: application/json
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Transfer-Encoding: chunked
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Connection: keep-alive
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: 
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: {&quot;timestamp&quot;:&quot;2022-06-18T11:24:55.006+00:00&quot;,&quot;status&quot;:400,&quot;error&quot;:&quot;Bad Request&quot;,&quot;message&quot;:&quot;JSON parse error: Cannot deserialize value of type `java.time.LocalDate` from String \&quot;06-06-2022\&quot;: Failed to deserialize java.time.LocalDate: (java.time.format.DateTimeParseException) Text '06-06-2022' could not be parsed at index 0; nested exception is com.fasterxml.jackson.databind.exc.InvalidFormatException: Cannot deserialize value of type `java.time.LocalDate` from String \&quot;06-06-2022\&quot;: Failed to deserialize java.time.LocalDate: (java.time.format.DateTimeParseException) Text '06-06-2022' could not be parsed at index 0\n at [Source: (PushbackInputStream); line: 1, column: 216] (through reference chain: pt.ua.garage.model.Client[\&quot;clientDate\&quot;])&quot;,&quot;path&quot;:&quot;/client&quot;}
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: &lt;-- END HTTP (769-byte body)
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: --&gt; POST http://garage.estga.com/client
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Content-Type: application/json; charset=UTF-8
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Content-Length: 252
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: 
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: {&quot;id&quot;:null,&quot;firstName&quot;:&quot;Bruno&quot;,&quot;lastName&quot;:&quot;Lopes&quot;,&quot;address&quot;:&quot;testing street&quot;,&quot;postalCode&quot;:&quot;3500-300&quot;,&quot;city&quot;:&quot;Viseu&quot;,&quot;country&quot;:&quot;Portugal&quot;,&quot;phoneNumber&quot;:919191919,&quot;nif&quot;:123456789,&quot;birthDate&quot;:&quot;2022-06-06&quot;,&quot;clientDate&quot;:&quot;2022-06-06T12:02:56Z&quot;,&quot;vehicles&quot;:[]}
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: --&gt; END POST (252-byte body)
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: &lt;-- 400 http://garage.estga.com/client (62ms)
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Server: nginx/1.18.0 (Ubuntu)
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Date: Sat, 18 Jun 2022 11:24:55 GMT
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Content-Type: application/json
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Transfer-Encoding: chunked
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Connection: keep-alive
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: 
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: {&quot;timestamp&quot;:&quot;2022-06-18T11:24:55.090+00:00&quot;,&quot;status&quot;:400,&quot;error&quot;:&quot;Bad Request&quot;,&quot;message&quot;:&quot;JSON parse error: Cannot deserialize value of type `java.time.LocalDate` from String \&quot;2022-06-06T12:02:56Z\&quot;: Failed to deserialize java.time.LocalDate: (java.time.format.DateTimeParseException) Text '2022-06-06T12:02:56Z' could not be parsed, unparsed text found at index 10; nested exception is com.fasterxml.jackson.databind.exc.InvalidFormatException: Cannot deserialize value of type `java.time.LocalDate` from String \&quot;2022-06-06T12:02:56Z\&quot;: Failed to deserialize java.time.LocalDate: (java.time.format.DateTimeParseException) Text '2022-06-06T12:02:56Z' could not be parsed, unparsed text found at index 10\n at [Source: (PushbackInputStream); line: 1, column: 216] (through reference chain: pt.ua.garage.model.Client[\&quot;clientDate\&quot;])&quot;,&quot;path&quot;:&quot;/client&quot;}
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: &lt;-- END HTTP (853-byte body)
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: --&gt; POST http://garage.estga.com/client
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Content-Type: application/json; charset=UTF-8
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Content-Length: 243
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: 
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: {&quot;id&quot;:null,&quot;firstName&quot;:&quot;Bruno&quot;,&quot;lastName&quot;:&quot;Lopes&quot;,&quot;address&quot;:&quot;testing street&quot;,&quot;postalCode&quot;:&quot;3500-300&quot;,&quot;city&quot;:&quot;Viseu&quot;,&quot;country&quot;:&quot;Portugal&quot;,&quot;phoneNumber&quot;:919191919,&quot;nif&quot;:1234567890,&quot;birthDate&quot;:&quot;2022-06-06&quot;,&quot;clientDate&quot;:&quot;2022-06-07&quot;,&quot;vehicles&quot;:[]}
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: --&gt; END POST (243-byte body)
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: &lt;-- 400 http://garage.estga.com/client (7ms)
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Server: nginx/1.18.0 (Ubuntu)
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Date: Sat, 18 Jun 2022 11:24:55 GMT
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Content-Type: application/json
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Transfer-Encoding: chunked
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Connection: keep-alive
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: 
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: {&quot;timestamp&quot;:&quot;2022-06-18T11:24:55.123+00:00&quot;,&quot;status&quot;:400,&quot;error&quot;:&quot;Bad Request&quot;,&quot;message&quot;:&quot;Invalid NIF&quot;,&quot;path&quot;:&quot;/client&quot;}
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: &lt;-- END HTTP (121-byte body)
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: --&gt; POST http://garage.estga.com/client
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Content-Type: application/json; charset=UTF-8
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Content-Length: 241
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: 
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: {&quot;id&quot;:null,&quot;firstName&quot;:&quot;Bruno&quot;,&quot;lastName&quot;:&quot;Lopes&quot;,&quot;address&quot;:&quot;testing street&quot;,&quot;postalCode&quot;:&quot;3500-300&quot;,&quot;city&quot;:&quot;Viseu&quot;,&quot;country&quot;:&quot;Portugal&quot;,&quot;phoneNumber&quot;:919191919,&quot;nif&quot;:12345678,&quot;birthDate&quot;:&quot;2022-06-06&quot;,&quot;clientDate&quot;:&quot;2022-06-07&quot;,&quot;vehicles&quot;:[]}
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: --&gt; END POST (241-byte body)
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: &lt;-- 400 http://garage.estga.com/client (8ms)
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Server: nginx/1.18.0 (Ubuntu)
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Date: Sat, 18 Jun 2022 11:24:55 GMT
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Content-Type: application/json
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Transfer-Encoding: chunked
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Connection: keep-alive
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: 
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: {&quot;timestamp&quot;:&quot;2022-06-18T11:24:55.143+00:00&quot;,&quot;status&quot;:400,&quot;error&quot;:&quot;Bad Request&quot;,&quot;message&quot;:&quot;Invalid NIF&quot;,&quot;path&quot;:&quot;/client&quot;}
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: &lt;-- END HTTP (121-byte body)
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: --&gt; POST http://garage.estga.com/client
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Content-Type: application/json; charset=UTF-8
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Content-Length: 243
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: 
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: {&quot;id&quot;:null,&quot;firstName&quot;:&quot;Bruno&quot;,&quot;lastName&quot;:&quot;Lopes&quot;,&quot;address&quot;:&quot;testing street&quot;,&quot;postalCode&quot;:&quot;3500-300&quot;,&quot;city&quot;:&quot;Viseu&quot;,&quot;country&quot;:&quot;Portugal&quot;,&quot;phoneNumber&quot;:1234567890,&quot;nif&quot;:123456789,&quot;birthDate&quot;:&quot;2022-06-06&quot;,&quot;clientDate&quot;:&quot;2022-06-07&quot;,&quot;vehicles&quot;:[]}
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: --&gt; END POST (243-byte body)
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: &lt;-- 400 http://garage.estga.com/client (10ms)
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Server: nginx/1.18.0 (Ubuntu)
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Date: Sat, 18 Jun 2022 11:24:55 GMT
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Content-Type: application/json
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Transfer-Encoding: chunked
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Connection: keep-alive
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: 
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: {&quot;timestamp&quot;:&quot;2022-06-18T11:24:55.164+00:00&quot;,&quot;status&quot;:400,&quot;error&quot;:&quot;Bad Request&quot;,&quot;message&quot;:&quot;Invalid Phone Number&quot;,&quot;path&quot;:&quot;/client&quot;}
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: &lt;-- END HTTP (130-byte body)
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: --&gt; POST http://garage.estga.com/client
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Content-Type: application/json; charset=UTF-8
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Content-Length: 241
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: 
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: {&quot;id&quot;:null,&quot;firstName&quot;:&quot;Bruno&quot;,&quot;lastName&quot;:&quot;Lopes&quot;,&quot;address&quot;:&quot;testing street&quot;,&quot;postalCode&quot;:&quot;3500-300&quot;,&quot;city&quot;:&quot;Viseu&quot;,&quot;country&quot;:&quot;Portugal&quot;,&quot;phoneNumber&quot;:12345678,&quot;nif&quot;:123456789,&quot;birthDate&quot;:&quot;2022-06-06&quot;,&quot;clientDate&quot;:&quot;2022-06-07&quot;,&quot;vehicles&quot;:[]}
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: --&gt; END POST (241-byte body)
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: &lt;-- 400 http://garage.estga.com/client (7ms)
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Server: nginx/1.18.0 (Ubuntu)
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Date: Sat, 18 Jun 2022 11:24:55 GMT
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Content-Type: application/json
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Transfer-Encoding: chunked
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Connection: keep-alive
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: 
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: {&quot;timestamp&quot;:&quot;2022-06-18T11:24:55.177+00:00&quot;,&quot;status&quot;:400,&quot;error&quot;:&quot;Bad Request&quot;,&quot;message&quot;:&quot;Invalid Phone Number&quot;,&quot;path&quot;:&quot;/client&quot;}
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: &lt;-- END HTTP (130-byte body)
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: --&gt; POST http://garage.estga.com/client
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Content-Type: application/json; charset=UTF-8
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Content-Length: 241
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: 
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: {&quot;id&quot;:null,&quot;firstName&quot;:&quot;Bruno&quot;,&quot;lastName&quot;:&quot;Lopes&quot;,&quot;address&quot;:&quot;testing street&quot;,&quot;postalCode&quot;:&quot;3500300&quot;,&quot;city&quot;:&quot;Viseu&quot;,&quot;country&quot;:&quot;Portugal&quot;,&quot;phoneNumber&quot;:919191919,&quot;nif&quot;:123456789,&quot;birthDate&quot;:&quot;2022-06-06&quot;,&quot;clientDate&quot;:&quot;2022-06-07&quot;,&quot;vehicles&quot;:[]}
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: --&gt; END POST (241-byte body)
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: &lt;-- 201 http://garage.estga.com/client (8ms)
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Server: nginx/1.18.0 (Ubuntu)
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Date: Sat, 18 Jun 2022 11:24:55 GMT
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Content-Type: application/json
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Transfer-Encoding: chunked
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Connection: keep-alive
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: 
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: 724
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: &lt;-- END HTTP (3-byte body)
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: --&gt; DELETE http://garage.estga.com/client/724
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: --&gt; END DELETE
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: &lt;-- 204 http://garage.estga.com/client/724 (9ms)
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Server: nginx/1.18.0 (Ubuntu)
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Date: Sat, 18 Jun 2022 11:24:55 GMT
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Connection: keep-alive
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: &lt;-- END HTTP
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: --&gt; POST http://garage.estga.com/client
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Content-Type: application/json; charset=UTF-8
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Content-Length: 242
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: 
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: {&quot;id&quot;:null,&quot;firstName&quot;:&quot;Bruno&quot;,&quot;lastName&quot;:&quot;Lopes&quot;,&quot;address&quot;:&quot;testing street&quot;,&quot;postalCode&quot;:&quot;3500 300&quot;,&quot;city&quot;:&quot;Viseu&quot;,&quot;country&quot;:&quot;Portugal&quot;,&quot;phoneNumber&quot;:919191919,&quot;nif&quot;:123456789,&quot;birthDate&quot;:&quot;2022-06-06&quot;,&quot;clientDate&quot;:&quot;2022-06-07&quot;,&quot;vehicles&quot;:[]}
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: --&gt; END POST (242-byte body)
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: &lt;-- 201 http://garage.estga.com/client (6ms)
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Server: nginx/1.18.0 (Ubuntu)
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Date: Sat, 18 Jun 2022 11:24:55 GMT
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Content-Type: application/json
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Transfer-Encoding: chunked
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Connection: keep-alive
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: 
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: 725
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: &lt;-- END HTTP (3-byte body)
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: --&gt; DELETE http://garage.estga.com/client/725
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: --&gt; END DELETE
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: &lt;-- 204 http://garage.estga.com/client/725 (7ms)
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Server: nginx/1.18.0 (Ubuntu)
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Date: Sat, 18 Jun 2022 11:24:55 GMT
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Connection: keep-alive
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: &lt;-- END HTTP
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: --&gt; POST http://garage.estga.com/client
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Content-Type: application/json; charset=UTF-8
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Content-Length: 242
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: 
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: {&quot;id&quot;:null,&quot;firstName&quot;:&quot;Bruno&quot;,&quot;lastName&quot;:&quot;Lopes&quot;,&quot;address&quot;:&quot;testing street&quot;,&quot;postalCode&quot;:&quot;300-3500&quot;,&quot;city&quot;:&quot;Viseu&quot;,&quot;country&quot;:&quot;Portugal&quot;,&quot;phoneNumber&quot;:919191919,&quot;nif&quot;:123456789,&quot;birthDate&quot;:&quot;2022-06-06&quot;,&quot;clientDate&quot;:&quot;2022-06-07&quot;,&quot;vehicles&quot;:[]}
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: --&gt; END POST (242-byte body)
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: &lt;-- 201 http://garage.estga.com/client (7ms)
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Server: nginx/1.18.0 (Ubuntu)
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Date: Sat, 18 Jun 2022 11:24:55 GMT
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Content-Type: application/json
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Transfer-Encoding: chunked
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Connection: keep-alive
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: 
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: 726
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: &lt;-- END HTTP (3-byte body)
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: --&gt; DELETE http://garage.estga.com/client/726
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: --&gt; END DELETE
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: &lt;-- 204 http://garage.estga.com/client/726 (7ms)
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Server: nginx/1.18.0 (Ubuntu)
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Date: Sat, 18 Jun 2022 11:24:55 GMT
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Connection: keep-alive
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: &lt;-- END HTTP
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: --&gt; POST http://garage.estga.com/client
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Content-Type: application/json; charset=UTF-8
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Content-Length: 242
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: 
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: {&quot;id&quot;:null,&quot;firstName&quot;:&quot;Bruno&quot;,&quot;lastName&quot;:&quot;Lopes&quot;,&quot;address&quot;:&quot;testing street&quot;,&quot;postalCode&quot;:&quot;3500-abc&quot;,&quot;city&quot;:&quot;Viseu&quot;,&quot;country&quot;:&quot;Portugal&quot;,&quot;phoneNumber&quot;:919191919,&quot;nif&quot;:123456789,&quot;birthDate&quot;:&quot;2022-06-06&quot;,&quot;clientDate&quot;:&quot;2022-06-07&quot;,&quot;vehicles&quot;:[]}
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: --&gt; END POST (242-byte body)
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: &lt;-- 201 http://garage.estga.com/client (7ms)
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Server: nginx/1.18.0 (Ubuntu)
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Date: Sat, 18 Jun 2022 11:24:55 GMT
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Content-Type: application/json
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Transfer-Encoding: chunked
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Connection: keep-alive
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: 
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: 727
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: &lt;-- END HTTP (3-byte body)
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: --&gt; DELETE http://garage.estga.com/client/727
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: --&gt; END DELETE
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: &lt;-- 204 http://garage.estga.com/client/727 (7ms)
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Server: nginx/1.18.0 (Ubuntu)
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Date: Sat, 18 Jun 2022 11:24:55 GMT
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Connection: keep-alive
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: &lt;-- END HTTP
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: --&gt; POST http://garage.estga.com/client
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Content-Type: application/json; charset=UTF-8
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Content-Length: 242
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: 
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: {&quot;id&quot;:null,&quot;firstName&quot;:&quot;Bruno&quot;,&quot;lastName&quot;:&quot;Lopes&quot;,&quot;address&quot;:&quot;testing street&quot;,&quot;postalCode&quot;:&quot;3500-300&quot;,&quot;city&quot;:&quot;Viseu&quot;,&quot;country&quot;:&quot;Portugal&quot;,&quot;phoneNumber&quot;:919191919,&quot;nif&quot;:123456789,&quot;birthDate&quot;:&quot;2022-06-06&quot;,&quot;clientDate&quot;:&quot;2022-06-07&quot;,&quot;vehicles&quot;:[]}
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: --&gt; END POST (242-byte body)
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: &lt;-- 201 http://garage.estga.com/client (6ms)
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Server: nginx/1.18.0 (Ubuntu)
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Date: Sat, 18 Jun 2022 11:24:55 GMT
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Content-Type: application/json
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Transfer-Encoding: chunked
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Connection: keep-alive
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: 
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: 728
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: &lt;-- END HTTP (3-byte body)
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: --&gt; GET http://garage.estga.com/client/728
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: --&gt; END GET
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: &lt;-- 200 http://garage.estga.com/client/728 (7ms)
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Server: nginx/1.18.0 (Ubuntu)
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Date: Sat, 18 Jun 2022 11:24:55 GMT
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Content-Type: application/json
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Transfer-Encoding: chunked
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Connection: keep-alive
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: 
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: {&quot;id&quot;:728,&quot;firstName&quot;:&quot;Bruno&quot;,&quot;lastName&quot;:&quot;Lopes&quot;,&quot;address&quot;:&quot;testing street&quot;,&quot;postalCode&quot;:&quot;3500-300&quot;,&quot;city&quot;:&quot;Viseu&quot;,&quot;country&quot;:&quot;Portugal&quot;,&quot;phoneNumber&quot;:919191919,&quot;nif&quot;:123456789,&quot;birthDate&quot;:&quot;2022-06-06&quot;,&quot;clientDate&quot;:&quot;2022-06-07&quot;,&quot;vehicles&quot;:[]}
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: &lt;-- END HTTP (241-byte body)
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: --&gt; DELETE http://garage.estga.com/client/728
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: --&gt; END DELETE
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: &lt;-- 204 http://garage.estga.com/client/728 (10ms)
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Server: nginx/1.18.0 (Ubuntu)
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Date: Sat, 18 Jun 2022 11:24:55 GMT
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Connection: keep-alive
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: &lt;-- END HTTP
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: --&gt; GET http://garage.estga.com/vehicle/779
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: --&gt; END GET
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: &lt;-- 200 http://garage.estga.com/vehicle/779 (4ms)
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Server: nginx/1.18.0 (Ubuntu)
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Date: Sat, 18 Jun 2022 11:24:55 GMT
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Content-Type: application/json
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Transfer-Encoding: chunked
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Connection: keep-alive
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: 
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: {&quot;id&quot;:779,&quot;client&quot;:723,&quot;brand&quot;:&quot;peugeot&quot;,&quot;model&quot;:&quot;207&quot;,&quot;year&quot;:2007,&quot;type&quot;:&quot;car&quot;,&quot;plate&quot;:&quot;AA-22-22&quot;,&quot;active&quot;:true}
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: &lt;-- END HTTP (113-byte body)
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: --&gt; POST http://garage.estga.com/client
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Content-Type: application/json; charset=UTF-8
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Content-Length: 355
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: 
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: {&quot;id&quot;:null,&quot;firstName&quot;:&quot;Bruno&quot;,&quot;lastName&quot;:&quot;Lopes&quot;,&quot;address&quot;:&quot;testing street&quot;,&quot;postalCode&quot;:&quot;3500-300&quot;,&quot;city&quot;:&quot;Viseu&quot;,&quot;country&quot;:&quot;Portugal&quot;,&quot;phoneNumber&quot;:919191919,&quot;nif&quot;:123456789,&quot;birthDate&quot;:&quot;2022-06-06&quot;,&quot;clientDate&quot;:&quot;2022-06-07&quot;,&quot;vehicles&quot;:[{&quot;id&quot;:779,&quot;client&quot;:723,&quot;brand&quot;:&quot;peugeot&quot;,&quot;model&quot;:&quot;207&quot;,&quot;year&quot;:2007,&quot;type&quot;:&quot;car&quot;,&quot;plate&quot;:&quot;AA-22-22&quot;,&quot;active&quot;:true}]}
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: --&gt; END POST (355-byte body)
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: &lt;-- 400 http://garage.estga.com/client (4ms)
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Server: nginx/1.18.0 (Ubuntu)
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Date: Sat, 18 Jun 2022 11:24:55 GMT
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Content-Type: application/json
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Transfer-Encoding: chunked
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Connection: keep-alive
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: 
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: {&quot;timestamp&quot;:&quot;2022-06-18T11:24:55.377+00:00&quot;,&quot;status&quot;:400,&quot;error&quot;:&quot;Bad Request&quot;,&quot;message&quot;:&quot;JSON parse error: Unresolved forward references for: ; nested exception is com.fasterxml.jackson.databind.deser.UnresolvedForwardReference: Unresolved forward references for: \n at [Source: (PushbackInputStream); line: 1, column: 355]Object id [723] (for `pt.ua.garage.model.Client`) at [Source: (PushbackInputStream); line: 1, column: 263].&quot;,&quot;path&quot;:&quot;/client&quot;}
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: &lt;-- END HTTP (451-byte body)
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: --&gt; GET http://garage.estga.com/vehicle/780
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: --&gt; END GET
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: &lt;-- 200 http://garage.estga.com/vehicle/780 (5ms)
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Server: nginx/1.18.0 (Ubuntu)
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Date: Sat, 18 Jun 2022 11:24:55 GMT
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Content-Type: application/json
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Transfer-Encoding: chunked
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Connection: keep-alive
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: 
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: {&quot;id&quot;:780,&quot;client&quot;:null,&quot;brand&quot;:&quot;peugeot&quot;,&quot;model&quot;:&quot;207&quot;,&quot;year&quot;:2007,&quot;type&quot;:&quot;car&quot;,&quot;plate&quot;:&quot;AA-22-22&quot;,&quot;active&quot;:true}
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: &lt;-- END HTTP (114-byte body)
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: --&gt; POST http://garage.estga.com/client
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Content-Type: application/json; charset=UTF-8
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Content-Length: 356
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: 
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: {&quot;id&quot;:null,&quot;firstName&quot;:&quot;Bruno&quot;,&quot;lastName&quot;:&quot;Lopes&quot;,&quot;address&quot;:&quot;testing street&quot;,&quot;postalCode&quot;:&quot;3500-300&quot;,&quot;city&quot;:&quot;Viseu&quot;,&quot;country&quot;:&quot;Portugal&quot;,&quot;phoneNumber&quot;:919191919,&quot;nif&quot;:123456789,&quot;birthDate&quot;:&quot;2022-06-06&quot;,&quot;clientDate&quot;:&quot;2022-06-07&quot;,&quot;vehicles&quot;:[{&quot;id&quot;:780,&quot;client&quot;:null,&quot;brand&quot;:&quot;peugeot&quot;,&quot;model&quot;:&quot;207&quot;,&quot;year&quot;:2007,&quot;type&quot;:&quot;car&quot;,&quot;plate&quot;:&quot;AA-22-22&quot;,&quot;active&quot;:true}]}
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: --&gt; END POST (356-byte body)
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: &lt;-- 201 http://garage.estga.com/client (6ms)
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Server: nginx/1.18.0 (Ubuntu)
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Date: Sat, 18 Jun 2022 11:24:55 GMT
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Content-Type: application/json
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Transfer-Encoding: chunked
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Connection: keep-alive
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: 
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: 729
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: &lt;-- END HTTP (3-byte body)
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: --&gt; DELETE http://garage.estga.com/client/729
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: --&gt; END DELETE
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: &lt;-- 204 http://garage.estga.com/client/729 (4ms)
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Server: nginx/1.18.0 (Ubuntu)
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Date: Sat, 18 Jun 2022 11:24:55 GMT
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: Connection: keep-alive
+jun. 18, 2022 12:24:55 DA TARDE okhttp3.internal.platform.Platform log
+INFO: &lt;-- END HTTP
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 7.3.3</a> at 18/06/2022, 12:24:57</p>
+</div>
+</div>
+</body>
+</html>

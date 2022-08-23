@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="pt"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>ResponseHttpBodyValidator.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">api-garage</a> &gt; <a href="index.source.html" class="el_package">api.validators</a> &gt; <span class="el_source">ResponseHttpBodyValidator.java</span></div><h1>ResponseHttpBodyValidator.java</h1><pre class="source lang-java linenums">package api.validators;
+
+import api.mappings.client.Client;
+import api.mappings.vehicle.Vehicle;
+import lombok.AccessLevel;
+import lombok.NoArgsConstructor;
+
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.is;
+
+@NoArgsConstructor(access = AccessLevel.PRIVATE)
+public class ResponseHttpBodyValidator {
+    public static void assertVehicle(Vehicle vehicleBody, Vehicle expectedVehicleBody){
+<span class="nc" id="L14">        assertThat(&quot;Id is not the expected&quot;, vehicleBody.getId(), is(expectedVehicleBody.getId()));</span>
+<span class="nc" id="L15">        assertThat(&quot;Client is not the expected&quot;, vehicleBody.getClient(), is(expectedVehicleBody.getClient()));</span>
+<span class="nc" id="L16">        assertThat(&quot;Brand is not the expected&quot;, vehicleBody.getBrand(), is(expectedVehicleBody.getBrand()));</span>
+<span class="nc" id="L17">        assertThat(&quot;Model is not the expected&quot;, vehicleBody.getModel(), is(expectedVehicleBody.getModel()));</span>
+<span class="nc" id="L18">        assertThat(&quot;Type is not the expected&quot;, vehicleBody.getType(), is(expectedVehicleBody.getType()));</span>
+<span class="nc" id="L19">        assertThat(&quot;Plate is not the expected&quot;, vehicleBody.getPlate(), is(expectedVehicleBody.getPlate()));</span>
+<span class="nc" id="L20">        assertThat(&quot;Year is not the expected&quot;, vehicleBody.getYear(), is(expectedVehicleBody.getYear()));</span>
+<span class="nc" id="L21">        assertThat(&quot;Active state is not the expected&quot;, vehicleBody.getActive(), is(expectedVehicleBody.getActive()));</span>
+<span class="nc" id="L22">    }</span>
+
+    public static void assertClient(Client clientBody, Client expectedClientBody){
+<span class="nc" id="L25">        assertThat(&quot;Id is not the expected&quot;, clientBody.getId(), is(expectedClientBody.getId()));</span>
+<span class="nc" id="L26">        assertThat(&quot;First Name is not the expected&quot;, clientBody.getFirstName(), is(expectedClientBody.getFirstName()));</span>
+<span class="nc" id="L27">        assertThat(&quot;Last Name is not the expected&quot;, clientBody.getLastName(), is(expectedClientBody.getLastName()));</span>
+<span class="nc" id="L28">        assertThat(&quot;Client Date is not the expected&quot;, clientBody.getClientDate(), is(expectedClientBody.getClientDate()));</span>
+<span class="nc" id="L29">        assertThat(&quot;Birth Date is not the expected&quot;, clientBody.getBirthDate(), is(expectedClientBody.getBirthDate()));</span>
+<span class="nc" id="L30">        assertThat(&quot;NIF is not the expected&quot;, clientBody.getNif(), is(expectedClientBody.getNif()));</span>
+<span class="nc" id="L31">        assertThat(&quot;Phone Number is not the expected&quot;, clientBody.getPhoneNumber(), is(expectedClientBody.getPhoneNumber()));</span>
+<span class="nc" id="L32">        assertThat(&quot;Country is not the expected&quot;, clientBody.getCountry(), is(expectedClientBody.getCountry()));</span>
+<span class="nc" id="L33">        assertThat(&quot;City is not the expected&quot;, clientBody.getCity(), is(expectedClientBody.getCity()));</span>
+<span class="nc" id="L34">        assertThat(&quot;Address is not the expected&quot;, clientBody.getAddress(), is(expectedClientBody.getAddress()));</span>
+<span class="nc" id="L35">        assertThat(&quot;Postal Code is not the expected&quot;, clientBody.getPostalCode(), is(expectedClientBody.getPostalCode()));</span>
+<span class="nc" id="L36">        assertThat(&quot;Vehicles is not the expected&quot;, clientBody.getVehicles(), is(expectedClientBody.getVehicles()));</span>
+<span class="nc" id="L37">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>
